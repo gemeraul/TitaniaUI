@@ -1,0 +1,47 @@
+<nav class="navbar is-light">
+  <!-- logo -->
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img src="assets/img/angular-logo.png">
+    </a>
+    <a role="button" class="navbar-burger" [ngClass]="{'is-active': active}" aria-label="menu" aria-expanded="false" (click)="activateMenu()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" [ngClass]="{'is-active': active}">
+    <div class="navbar-start">
+      <a class="navbar-item">Home</a>
+      <a class="navbar-item">Web Development</a>
+      <a class="navbar-item">Enterprise Software</a>
+      <a class="navbar-item">About us</a>
+      <a class="navbar-item">Contact</a>
+    </div>
+
+    <div class="navbar-end">
+      <span class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span>
+                Twitter
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.7.1/bulma-0.7.1.zip">
+              <span class="icon">
+                <i class="fa fa-facebook"></i>
+              </span>
+              <span>Facebook</span>
+            </a>
+          </p>
+        </div>
+      </span>
+    </div>
+  </div>
+</nav>
