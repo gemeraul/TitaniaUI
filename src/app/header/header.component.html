@@ -1,4 +1,4 @@
-<nav class="navbar is-info">
+<nav class="navbar is-blue">
   <!-- logo -->
   <div class="navbar-brand">
     <a class="navbar-item">
@@ -12,11 +12,11 @@
   </div>
   <div class="navbar-menu" [ngClass]="{'is-active': active}">
     <div class="navbar-start">
-      <a class="navbar-item">Web App Development</a>
-      <a class="navbar-item">Custom Software Development</a>
-      <a class="navbar-item">UX Design</a>
-      <a class="navbar-item">Our team</a>
-      <a class="navbar-item">Contact</a>
+      <a class="navbar-item" [ngClass]="{'is-white': !active}">Web App Development</a>
+      <a class="navbar-item" [ngClass]="{'is-white': !active}">Custom Software Development</a>
+      <a class="navbar-item" [ngClass]="{'is-white': !active}">UX Design</a>
+      <a class="navbar-item" [ngClass]="{'is-white': !active}">Our team</a>
+      <a class="navbar-item" [ngClass]="{'is-white': !active}">Contact</a>
     </div>
 
     <div class="navbar-end">

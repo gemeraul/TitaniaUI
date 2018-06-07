@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
 
   activateMenu() {
     this.active = !this.active
-    console.log(this.active)
   }
 
 }
