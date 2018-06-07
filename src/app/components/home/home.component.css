@@ -26,3 +26,17 @@
     cursor: default;
 }
 
+.optionBox:hover .view-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.view-info {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px);
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+}
+
