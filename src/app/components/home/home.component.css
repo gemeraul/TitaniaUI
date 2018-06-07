@@ -60,18 +60,18 @@
     -webkit-transition: all 1s ease;
     text-transform: uppercase;
     transition: all 1s ease;
-    padding-right: 17%;
-    padding-left: 17%;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
 }
 
 .ux {
-    padding-right: 39%;
-    padding-left: 39%;
+    padding-right: 7.5em;
+    padding-left: 7.5em;
 }
 
 .mobile {
-    padding-right: 14%;
-    padding-left: 14%;
+    padding-right: 1.3em;
+    padding-left: 1.3em;
 }
 
 h2:after {
@@ -89,17 +89,13 @@ h2:after {
     -webkit-transform: translateY(15px);
     -ms-transform: translateY(15px);
     transform: translateY(15px);
-    -webkit-transition: .2s ease;
-    transition: .2s ease;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
 }
 
 .round-button {
     color: #209cee;
     border: 1px solid #209cee;
-}
-
-.bottom-separation {
-    margin-bottom: 3em;
 }
 
 .info-separation {
