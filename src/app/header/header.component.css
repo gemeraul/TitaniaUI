@@ -15,7 +15,7 @@
 .navbar-item {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 1em;
+    font-size: .9em;
     border-top: 1px solid rgba(219, 219, 219, 0.5);
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
