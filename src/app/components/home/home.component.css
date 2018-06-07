@@ -1,3 +1,14 @@
+.big-icon {
+    font-size: 5em;
+    margin: 10%;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.optionBox:hover .big-icon {
+    color: #3f51b5;
+}
+
 .optionBox {
     text-align: center;
     -webkit-transition: all .2s ease;
@@ -26,10 +37,52 @@
     cursor: default;
 }
 
+.optionBox:hover h2 {
+    /*color: #d6a802;*/
+}
+
+.optionBox p {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 .optionBox:hover .view-info {
     transform: translateY(0);
     opacity: 1;
 }
+
+.option-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 1em;
+    /*color: #209cee;*/
+    -webkit-transition: all 1s ease;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    padding-right: 17%;
+    padding-left: 17%;
+}
+
+.ux {
+    padding-right: 39%;
+    padding-left: 39%;
+}
+
+.mobile {
+    padding-right: 14%;
+    padding-left: 14%;
+}
+
+h2:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #f0cb47;  
+    transform: scaleX(0);  
+    transition: transform .5s ease-in-out;
+}
+
+.optionBox:hover h2:after { transform: scaleX(1); }
 
 .view-info {
     opacity: 0;
@@ -43,5 +96,13 @@
 .round-button {
     color: #209cee;
     border: 1px solid #209cee;
+}
+
+.bottom-separation {
+    margin-bottom: 3em;
+}
+
+.info-separation {
+    margin: 1.5em;
 }
 
