@@ -21,6 +21,11 @@
     transition: all .2s ease;
 }
 
+.is-white:hover {
+    background-color: #5b6fe0;
+    color: white;
+}
+
 .is-blue {
     background-color: #3f51b5;
 }
