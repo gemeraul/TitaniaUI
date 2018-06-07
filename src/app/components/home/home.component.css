@@ -40,3 +40,8 @@
     transition: .2s ease;
 }
 
+.round-button {
+    color: #209cee;
+    border: 1px solid #209cee;
+}
+
