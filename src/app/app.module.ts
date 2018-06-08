@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AngularFontAwesomeModule } from '../../node_modules/angular-font-awesome';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AngularFontAwesomeModule } from '../../node_modules/angular-font-awesom
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    TechnologiesComponent
   ],
   imports: [
     BrowserModule,

@@ -30,6 +30,12 @@
     background-color: #3f51b5;
 }
 
-.is-white {
+.is-wide {
     color: white;
+    border-top: none;
+}
+
+.right-separation {
+    border-top: none;
+    margin-right: 0.75em;
 }
