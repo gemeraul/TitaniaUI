@@ -37,10 +37,6 @@
     cursor: default;
 }
 
-.optionBox:hover h2 {
-    /*color: #d6a802;*/
-}
-
 .optionBox p {
     padding-left: 20%;
     padding-right: 20%;

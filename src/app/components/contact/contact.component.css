@@ -1,0 +1,45 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    cursor: default;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    cursor: default;
+    margin-bottom: 1%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    cursor: default;
+}
+
+mat-divider {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.level {
+    margin-bottom: .5em;
+}
+
+.send {
+    width: 20%;  
+}
+
+.full-width {
+    width: 60%;
+}
+
+.grouped-inputs {
+    justify-content: left;
+}
+
+.same-level {
+    margin-right: 2%;    
+}
