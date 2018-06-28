@@ -1,45 +1,143 @@
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
+<section class="hero top-banner">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h1 class="title quote">Get a quote for your project </h1>
+        <mat-icon class="icon-quote">keyboard_arrow_down</mat-icon>
       </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="thirdFormGroup">
-    <form [formGroup]="thirdFormGroup">
-      <ng-template matStepLabel>Fill out your bday</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Birthday" formControlName="thirdCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
-  </mat-step>
-</mat-horizontal-stepper>
+  </div>
+
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button color="primary" mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button color="primary" mat-button matStepperPrevious>Back</button>
+          <button color="primary" mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Fill out your bday</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Birthday" formControlName="thirdCtrl" required>
+        </mat-form-field>
+        <div>
+          <button color="primary" mat-button matStepperPrevious>Back</button>
+          <button color="primary" mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button color="primary" mat-button matStepperPrevious>Back</button>
+        <button color="primary" mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</section>
+<section class="hero ">
+  <!-- this banner wil be a component in future -->
+  <div class="skills hero is-info">
+    <div class="hero-body highlight-box">
+      <div class="container">
+        <div class="columns is-centered">
+
+          <div class="column has-text-centered top-row">
+            <h1 class="title upper-text">Web Application Development</h1>
+            <h2 class="subtitle lower-text">Innovate your industry</h2>
+          </div>
+
+        </div>
+        <div class="columns is-centered">
+          <div class="column"></div>
+          <div class="column ">
+            <p class=""><span class="highlight-text">Titania Tech</span> focuses on quality and performance for your web Application
+              project without leaving aside good <span class="highlight-text">UX
+              design</span> practices and site accessibility. We build robust and <span class="highlight-text">scalable</span>              applications using modern technologies which in turn allows us to implement the best <span class="highlight-text">features</span>              possible.
+            </p>
+          </div>
+          <div class="column center-icon">
+            <div><i class="fa fa-connectdevelop big-icon"></i></div>
+            <div class="separation"><button mat-raised-button color="accent">Contact Us</button></div>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero ">
+  <!-- this banner wil be a component in future -->
+  <div class="skills hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered top-row">
+            <h1 class="title upper-text">Why Web Development?</h1>
+            <div class="columns is-centered">
+              <div class="column"></div>
+              <div class="column has-text-centered ">
+                <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good
+                  UX design practices and site accessibility. So many things have chnage and evoledk aksgkfkgkdhfgh jdhfj
+                  gijkjdf htkms </p>
+              </div>
+              <div class="column"></div>
+            </div>
+          </div>
+        </div>
+        <mat-divider class="separation-bottom"></mat-divider>
+        <div class="columns is-centered">
+          <div class="column option">
+            <div class="flex-top">
+              <h2 class="subtitle lower-text">Front End</h2>
+              <mat-icon class="margin-right">view_quilt</mat-icon>
+            </div>
+            <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
+              design practices and site accessibility. We build robust and scalble applications using modern technologies
+              which in turn allows us to implement the best features possible.</p>
+            <button mat-raised-button color="primary" class="view-tech">Check out our Front End tools</button>
+          </div>
+          <div class="column option">
+            <div class="flex-top">
+              <h2 class="subtitle lower-text">Back End</h2>
+              <mat-icon class="margin-right">storage</mat-icon>
+            </div>
+            <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
+              design practices and site accessibility. We build robust and scalble applications using modern technologies
+              which in turn allows us to implement the best features possible.</p>
+            <button mat-raised-button color="primary" class="view-tech">Check out our Back End tools</button>
+          </div>
+          <div class="column option">
+            <div class="flex-top">
+              <h2 class="subtitle lower-text">Hosting</h2>
+              <mat-icon class="margin-right">cloud_done</mat-icon>
+            </div>
+            <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
+              design practices and site accessibility. We build robust and scalble applications using modern technologies
+              which in turn allows us to implement the best features possible.</p>
+            <button mat-raised-button color="primary" class="view-tech">Check out our Hosting options</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

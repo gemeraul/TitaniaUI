@@ -1,0 +1,122 @@
+.is-info {
+    background-color: #68acda;
+}
+
+.lower-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.quote {
+    color: white;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9em;
+    font-weight: 300;
+}
+
+.icon-quote {
+    margin-left: .3em;
+}
+
+.upper-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.big-icon {
+    font-size: 8em;
+    padding-top: 10%;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.big-icon:hover  {
+    color: #f9e18b;
+}
+
+.center-icon {
+    text-align: center;
+}
+
+.description {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.separation {
+    margin-top: 1.5em;
+}
+
+.separation-bottom {
+    margin-bottom: 3em;
+}
+
+.title-line {
+    color: #f9e18b;
+    margin: 0;
+}
+
+.top-row {
+    margin-bottom: 2em;
+}
+
+.flex-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-inlne-top {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.margin-right {
+    margin-right: .5em;
+}
+
+.view-tech {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.option:hover .view-tech {
+    transform: translateY(0);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.option {
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.option:hover {
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,.1);
+}
+
+.highlight-box:hover .highlight-text {
+    color: #f9e18b;
+}
+
+.highlight-text {
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.hero.top-banner {
+    background-color: #3f51b5;
+    color: #fff;
+}
