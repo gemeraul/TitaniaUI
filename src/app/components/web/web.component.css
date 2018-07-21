@@ -10,13 +10,13 @@
 }
 
 .quote {
-    color: white;
+    color: #292a2f;
     margin-top: 1em;
     margin-left: 1em;
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: .9em;
-    font-weight: 300;
+    font-size: 1.5em;
+    font-weight: 100;
 }
 
 .icon-quote {
@@ -117,6 +117,20 @@
 }
 
 .hero.top-banner {
-    background-color: #3f51b5;
-    color: #fff;
+    background-color: #ececec;
+    color: #767782;
+}
+
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full-width {
+    width: 80%;
 }

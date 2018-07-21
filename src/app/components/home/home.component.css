@@ -35,7 +35,7 @@
 }
 
 .title-main {
-    color: white;
+    color: #767782;
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
     font-weight: 100;
@@ -158,8 +158,8 @@ h2:after {
 }
 
 .hero.top-banner {
-    background-color: #3f51b5;
-    color: #fff;
+    background-color: #ececec;
+    color: #516175;
 }
 
 .text-p {
