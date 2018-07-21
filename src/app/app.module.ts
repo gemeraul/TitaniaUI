@@ -12,7 +12,8 @@ import {
   MatTooltipModule, 
   MatStepperModule,
   MatExpansionModule,
-  MatSnackBarModule } from '@angular/material';
+  MatSnackBarModule,
+  MatListModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -53,7 +54,8 @@ import { WebComponent } from './components/web/web.component';
     MatStepperModule,
     AppRoutingModule,
     MatExpansionModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -182,20 +182,27 @@
               which in turn allows us to implement the best features possible.</p>
             <!--<button mat-raised-button color="primary" class="view-tech">Check out our Front End tools</button>-->
             <div class="view-tech">
-            <mat-accordion>
-              <mat-expansion-panel class="expansion-list" hideToggle>
-                <mat-expansion-panel-header class="text">
-                  <mat-panel-title class="text">
-                    Front End
-                  </mat-panel-title>
-                  <mat-panel-description class="text">
-                    Check out our tools
-                  </mat-panel-description>
-                  <mat-icon>view_quilt</mat-icon>
-                </mat-expansion-panel-header>
-                <span>aaaaaa</span>
-              </mat-expansion-panel>
-            </mat-accordion>
+              <mat-accordion>
+                <mat-expansion-panel class="expansion-list" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title class="text">
+                      Front End
+                    </mat-panel-title>
+                    <mat-panel-description class="text">
+                      Check out our tools
+                    </mat-panel-description>
+                    <mat-icon>view_quilt</mat-icon>
+                  </mat-expansion-panel-header>
+                  <mat-divider class="tool-divider"></mat-divider>
+                  <mat-list>
+                    <h3 mat-subheader class="text">Technologies</h3>
+                    <mat-list-item *ngFor="let tools of frontEndTools">
+                      <mat-icon mat-list-icon class="tool-icon">build</mat-icon>
+                      <h4 mat-line class="text">{{tools.name}}</h4>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+              </mat-accordion>
             </div>
           </div>
           <div class="column option">
@@ -206,7 +213,30 @@
             <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
               design practices and site accessibility. We build robust and scalble applications using modern technologies
               which in turn allows us to implement the best features possible.</p>
-            <button mat-raised-button color="primary" class="view-tech">Check out our Back End tools</button>
+            <!--<button mat-raised-button color="primary" class="view-tech">Check out our Back End tools</button>-->
+            <div class="view-tech">
+              <mat-accordion>
+                <mat-expansion-panel class="expansion-list" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title class="text">
+                      Back End
+                    </mat-panel-title>
+                    <mat-panel-description class="text">
+                      Check out our tools
+                    </mat-panel-description>
+                    <mat-icon>storage</mat-icon>
+                  </mat-expansion-panel-header>
+                  <mat-divider class="tool-divider"></mat-divider>
+                  <mat-list>
+                    <h3 mat-subheader class="text">Technologies</h3>
+                    <mat-list-item *ngFor="let tools of backEndTools">
+                      <mat-icon mat-list-icon class="tool-icon">build</mat-icon>
+                      <h4 mat-line class="text">{{tools.name}}</h4>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
           </div>
           <div class="column option">
             <div class="flex-top">
@@ -216,7 +246,30 @@
             <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
               design practices and site accessibility. We build robust and scalble applications using modern technologies
               which in turn allows us to implement the best features possible.</p>
-            <button mat-raised-button color="primary" class="view-tech">Check out our Hosting options</button>
+            <!--<button mat-raised-button color="primary" class="view-tech">Check out our Hosting options</button>-->
+            <div class="view-tech">
+              <mat-accordion>
+                <mat-expansion-panel class="expansion-list" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title class="text">
+                      Hosting
+                    </mat-panel-title>
+                    <mat-panel-description class="text">
+                      Check out our tools
+                    </mat-panel-description>
+                    <mat-icon>storage</mat-icon>
+                  </mat-expansion-panel-header>
+                  <mat-divider class="tool-divider"></mat-divider>
+                  <mat-list>
+                    <h3 mat-subheader class="text">Technologies</h3>
+                    <mat-list-item *ngFor="let tools of hostingTools">
+                      <mat-icon mat-list-icon class="tool-icon">build</mat-icon>
+                      <h4 mat-line class="text">{{tools.name}}</h4>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
           </div>
         </div>
       </div>

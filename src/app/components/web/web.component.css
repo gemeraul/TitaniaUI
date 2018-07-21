@@ -87,8 +87,8 @@
     -webkit-transform: translateY(15px);
     -ms-transform: translateY(15px);
     transform: translateY(15px);
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
 }
 
 .option:hover .view-tech {
@@ -141,4 +141,13 @@
 
 .expansion-list .text {
     color: white;
+}
+
+.tool-icon {
+  font-size: .5em;
+  color: white;
+}
+
+.tool-divider {
+    border-top-color: rgba(225, 225, 225, .5);
 }
