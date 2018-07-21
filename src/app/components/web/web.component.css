@@ -133,3 +133,12 @@
 .full-width {
     width: 80%;
 }
+
+.expansion-list {
+    background-color: #673ab7;
+    color: white;
+}
+
+.expansion-list .text {
+    color: white;
+}
