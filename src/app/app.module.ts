@@ -25,6 +25,7 @@ import { AngularFontAwesomeModule } from '../../node_modules/angular-font-awesom
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
+import { MobileComponent } from './components/mobile/mobile.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { WebComponent } from './components/web/web.component';
     HomeComponent,
     TechnologiesComponent,
     ContactComponent,
-    WebComponent
+    WebComponent,
+    MobileComponent
   ],
   imports: [
     BrowserModule,
