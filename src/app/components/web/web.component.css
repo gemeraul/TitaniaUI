@@ -37,7 +37,7 @@
 }
 
 .big-icon:hover  {
-    color: #f9e18b;
+    color: #f3d119;
 }
 
 .center-icon {
@@ -107,16 +107,16 @@
 }
 
 .highlight-box:hover .highlight-text {
-    color: #f9e18b;
+    color: white;
 }
 
 .highlight-text {
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
 }
 
 .hero.top-banner {
-    background-color: #ececec;
+    background-color: #f9f7f7;
     color: #767782;
 }
 
@@ -150,4 +150,8 @@
 
 .tool-divider {
     border-top-color: rgba(225, 225, 225, .5);
+}
+
+.light-color {
+    background-color: lightblue;
 }
