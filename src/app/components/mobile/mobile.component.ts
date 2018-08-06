@@ -16,7 +16,7 @@ export class MobileComponent implements OnInit {
   fourthFormGroup: FormGroup;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
-  step = 0;
+  step = -1;
   email = new FormControl('', [Validators.required, Validators.email]);
   messageSent: boolean = false;
   frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Ionic' }, { name: 'Bulma' }, { name: 'Material Design' }];
