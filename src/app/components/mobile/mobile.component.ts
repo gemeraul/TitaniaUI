@@ -19,7 +19,7 @@ export class MobileComponent implements OnInit {
   step = -1;
   email = new FormControl('', [Validators.required, Validators.email]);
   messageSent: boolean = false;
-  frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Ionic' }, { name: 'Bulma' }, { name: 'Material Design' }];
+  frontEndTools: Array<any> = [{ name: 'Ionic' }, { name: 'Flutter' }, { name: 'Material Design' }];
   backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'ExpressJs' }, { name: 'Python' }, { name: 'Hapi.js' }];
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
 

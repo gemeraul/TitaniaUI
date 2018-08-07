@@ -107,7 +107,7 @@
 }
 
 .highlight-box:hover .highlight-text {
-    color: white;
+    color: #b1970b;
 }
 
 .highlight-text {
@@ -157,5 +157,9 @@
 }
 
 .text-light {
-    color: white;
+    color: #539bad;
+}
+
+.soft-blue {
+    background-color: #e5ecee;
 }
