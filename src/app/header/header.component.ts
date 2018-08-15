@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   active: boolean = false;
+  drop: boolean = false;
 
   constructor() { }
 
@@ -16,6 +17,14 @@ export class HeaderComponent implements OnInit {
 
   activateMenu() {
     this.active = !this.active
+  }
+
+  dropMenu() {
+    this.drop = !this.drop;
+  }
+
+  closeDropdown() {
+    this.drop = false;
   }
 
 }

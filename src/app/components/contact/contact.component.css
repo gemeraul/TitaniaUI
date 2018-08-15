@@ -43,3 +43,39 @@ mat-divider {
 .same-level {
     margin-right: 2%;    
 }
+
+.title-option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
+    cursor: default;
+}
+
+.follow-icon.center {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    
+}
+
+.follow-icon.google:hover {
+    background-color: #d65858;
+    color: white;
+}
+
+.follow-icon.twitter:hover {
+    background-color: #4daaef;
+    color: white;
+}
+
+.follow-icon.linkedin:hover {
+    background-color: #214fd6;
+    color: white;
+}
+
+.follow-icon {
+    background-color: white;
+    color: #fcd840;
+    font-size: 1.2em;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}

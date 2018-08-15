@@ -16,11 +16,11 @@ export class WebComponent implements OnInit {
   fourthFormGroup: FormGroup;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
-  step = 0;
+  step = -1;
   email = new FormControl('', [Validators.required, Validators.email]);
   messageSent: boolean = false;
-  frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Ionic' }, { name: 'Bulma' }, { name: 'Material Design' }];
-  backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'ExpressJs' }, { name: 'Python' }, { name: 'Hapi.js' }];
+  frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Bulma' }, { name: 'Angular Material' }];
+  backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'Python' }, { name: 'MongoDB' }];
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
 
   constructor(private _formBuilder: FormBuilder, public snackBar: MatSnackBar) { }

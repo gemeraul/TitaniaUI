@@ -107,7 +107,7 @@
 }
 
 .highlight-box:hover .highlight-text {
-    color: white;
+    color: #b1970b;
 }
 
 .highlight-text {
@@ -153,5 +153,8 @@
 }
 
 .light-color {
-    background-color: lightblue;
+    background-color: #e5ecee;
+    background-image: url('../../../assets/img/joel3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

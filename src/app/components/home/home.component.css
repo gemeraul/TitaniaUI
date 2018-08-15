@@ -72,19 +72,19 @@
 
 .option-title {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    font-weight: 400;
+    font-size: 1.8em;
+    font-weight: 100;
     margin-bottom: 1em;
     /*color: #209cee;*/
     -webkit-transition: all 1s ease;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     transition: all 1s ease;
     
 }
 /*This is for screen size of 1470 max limit*/
 .web {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 19%;
+    padding-right: 19%;
 }
 
 .ux {
@@ -93,8 +93,8 @@
 }
 
 .mobile {
-    padding-right: 8%;
-    padding-left: 8%;
+    padding-right: 18%;
+    padding-left: 18%;
 }
 
 h2:after {
@@ -103,6 +103,11 @@ h2:after {
     border-bottom: solid 2px #f0cb47;  
     transform: scaleX(0);  
     transition: transform .5s ease-in-out;
+}
+
+mat-divider {
+    margin-bottom: .5em;
+    margin-top: .5em;
 }
 
 .optionBox:hover h2:after { transform: scaleX(1); }
@@ -160,6 +165,14 @@ h2:after {
 .hero.top-banner {
     background-color: #f9f7f7;
     color: #516175;
+    background-image: url('../../../assets/img/joel2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 -10px 10px -10px #000000;
+}
+
+.hero .filter {
+    background: rgba(254, 255, 255, 0.5);
 }
 
 .text-p {
@@ -176,5 +189,41 @@ h2:after {
 .light-color {
     background-color: #3e51b5;
     color: white;
+    background-image: url('../../../assets/img/joel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 10px 10px -10px #000000;
 }
 
+.light-color .filter{
+    background: rgba(21, 60, 105, 0.5);
+}
+
+.follow-icon.center {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    
+}
+
+.follow-icon.google:hover {
+    background-color: #d65858;
+    color: white;
+}
+
+.follow-icon.twitter:hover {
+    background-color: #4daaef;
+    color: white;
+}
+
+.follow-icon.linkedin:hover {
+    background-color: #214fd6;
+    color: white;
+}
+
+.follow-icon {
+    background-color: white;
+    color: #fcd840;
+    font-size: 1.2em;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}

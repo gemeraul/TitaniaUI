@@ -1,5 +1,5 @@
 <section class="hero top-banner">
-  <div class="hero-body">
+  <div class="hero-body filter">
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -22,13 +22,15 @@
       <div class="columns is-centered">
         <div class="column has-text-centered title-option">
           Choose a project type:
+          <mat-divider></mat-divider>
         </div>
+
       </div>
       <div class="columns">
         <!-- this boxes wil be a component in future -->
         <div class="column optionBox">
           <i class="fa fa-connectdevelop big-icon"></i>
-          <h2 class="option-title web">Web Application Development</h2>
+          <h2 class="option-title web">Web Development</h2>
           <p>Reliable solutions that dramatically improve your internal processes.</p>
           <div class="info-separation">
             <button mat-raised-button class="round-button">Cross-platform & scalable solutions</button>
@@ -42,7 +44,7 @@
         </div>
         <div class="column optionBox">
           <i class="fa fa-gg big-icon"></i>
-          <h2 class="option-title ux">Website UI/UX Design</h2>
+          <h2 class="option-title ux">UI/UX Design</h2>
           <p>Reliable solutions that dramatically improve your internal processes.</p>
           <div class="info-separation">
             <button mat-raised-button class="round-button">Cross-platform & scalable solutions</button>
@@ -53,8 +55,8 @@
           </div>
         </div>
         <div class="column optionBox">
-          <i class="fa fa-android big-icon"></i>
-          <h2 class="option-title mobile">Mobile Application Development</h2>
+          <i class="fa fa-list big-icon"></i>
+          <h2 class="option-title mobile">Product Portfolio</h2>
           <p>Reliable solutions that dramatically improve your internal processes.</p>
           <div class="info-separation">
             <button mat-raised-button class="round-button">Cross-platform & scalable solutions</button>
@@ -65,12 +67,19 @@
           </div>
         </div>
       </div>
+      <div class="columns is-centered">
+
+        <div class="column has-text-centered title-option">
+          <mat-divider></mat-divider>
+          Click an option and request a quote!
+        </div>
+      </div>
 
     </div>
   </div>
   <!-- this banner wil be a component in future -->
   <div class="skills hero light-color">
-    <div class="hero-body">
+    <div class="hero-body filter">
       <div class="container">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -93,7 +102,28 @@
 
         </div>
         <div class="columns is-centered button-separation">
-          <button mat-raised-button color="accent" class="">Who are we?</button>
+          <div class="column has-text-centered">
+             <button mat-raised-button color="accent" class="">Who are we?</button>
+          </div>
+        </div>
+        <!-- Follow us section -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered title-option">
+            Follow us here:
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <button mat-fab class="follow-icon google">
+              <i class="fa fa-google-plus"></i>
+            </button>
+            <button mat-fab class="follow-icon center twitter">
+              <i class="fa fa-twitter"></i>
+            </button>
+            <button mat-fab class="follow-icon linkedin">
+              <i class="fa fa-linkedin"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

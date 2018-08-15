@@ -11,13 +11,10 @@
 
       <div class="level grouped-inputs">
         <mat-form-field class="same-level">
-          <input matInput placeholder="Name" required>
+          <input matInput placeholder="Full name" required>
           <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
-        <mat-form-field class="same-level">
-          <input matInput placeholder="Last Name" required>
-          <mat-icon matSuffix>person</mat-icon>
-        </mat-form-field>
+
       </div>
 
       <div class="level">
@@ -43,15 +40,31 @@
         </mat-form-field>
       </div>
 
-      <button mat-raised-button 
-              matTooltip="Click this to send us an email" 
-              [matTooltipPosition]="'after'" 
-              aria-label="Button that submits info filled out in form above"
-              class="send" 
-              color="primary">
+      <button mat-raised-button matTooltip="Click this to send us an email" [matTooltipPosition]="'after'" aria-label="Button that submits info filled out in form above"
+        class="send" color="primary">
         Submit
       </button>
 
+    </div>
+    <!-- Follow us section -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered title-option">
+        <mat-divider></mat-divider>
+        Follow us here:
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <button mat-fab class="follow-icon google">
+              <i class="fa fa-google-plus"></i>
+            </button>
+        <button mat-fab class="follow-icon center twitter">
+              <i class="fa fa-twitter"></i>
+            </button>
+        <button mat-fab class="follow-icon linkedin">
+              <i class="fa fa-linkedin"></i>
+            </button>
+      </div>
     </div>
   </div>
 </section>

@@ -2,7 +2,7 @@
   <!-- logo -->
   <div class="navbar-brand">
     <a class="navbar-item" [ngClass]="{'is-wide': !active}">
-      <img src="assets/img/angular-logo.png">
+      <img src="assets/img/titania-logo.svg">
     </a>
     <a role="button" class="navbar-burger" [ngClass]="{'is-active': active}" aria-label="menu" aria-expanded="false" (click)="activateMenu()">
       <span aria-hidden="true"></span>
@@ -12,26 +12,40 @@
   </div>
   <div class="navbar-menu" [ngClass]="{'is-active': active}">
     <div class="navbar-start">
-      <a routerLink="" class="navbar-item" [ngClass]="{'is-wide': !active}">Services</a>
-      <a class="navbar-item" [ngClass]="{'is-wide': !active}">Technologies</a>
+      <a routerLink="" class="navbar-item" [ngClass]="{'is-wide': !active}">Titania</a>
+      <!--<a routerLink="" class="navbar-item" [ngClass]="{'is-wide': !active}">Services</a>-->
+      <a class="navbar-item has-dropdown" [ngClass]="{'is-active': drop}" (click)="dropMenu()">
+        <a class="navbar-link" [ngClass]="{'is-wide': !active}">
+          Services
+        </a>
+        <div class="navbar-dropdown is-boxed" (mouseleave)="closeDropdown()">
+          <a class="navbar-item" routerLink="web">
+            Web Development
+          </a>
+          <a class="navbar-item" routerLink="design">
+            UI/UX Design
+          </a>
+          <a class="navbar-item" routerLink="portfolio">
+            Product Portfolio
+          </a>
+        </div>
+      </a>
       <a class="navbar-item" [ngClass]="{'is-wide': !active}">Who are we?</a>
-      
       <a routerLink="contact" class="navbar-item" [ngClass]="{'is-wide': !active}">Contact</a>
     </div>
-
     <div class="navbar-end ">
       <span class="navbar-item" [ngClass]="{'right-separation': !active}">
         <div class="field is-grouped">
           <p class="control">
-            <a class="button is-light-blue" data-social-network="Twitter" data-social-action="tweet" >
+            <a class="button is-google" >
               <span class="icon">
-                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google-plus"></i>
               </span>
             </a>
           </p>
           
           <p class="control">
-            <a class="button is-link">
+            <a class="button is-linkedin">
               <span class="icon">
                 <i class="fa fa-linkedin"></i>
               </span>
