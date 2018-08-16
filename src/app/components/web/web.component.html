@@ -172,7 +172,7 @@
         </div>
         <mat-divider class="separation-bottom"></mat-divider>
         <div class="columns is-centered">
-          <div class="column option">
+          <div class="column option" (mouseleave)="collapsePanel()">
             <div class="flex-top">
               <h2 class="subtitle lower-text">Front End</h2>
               <mat-icon class="margin-right">view_quilt</mat-icon>
@@ -183,7 +183,7 @@
             <!--<button mat-raised-button color="primary" class="view-tech">Check out our Front End tools</button>-->
             <div class="view-tech">
               <mat-accordion>
-                <mat-expansion-panel class="expansion-list" hideToggle>
+                <mat-expansion-panel [expanded]="expandOption == 1" (opened)="expandOption = 1" class="expansion-list" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title class="text">
                       Front End
@@ -205,7 +205,7 @@
               </mat-accordion>
             </div>
           </div>
-          <div class="column option">
+          <div class="column option" (mouseleave)="collapsePanel()">
             <div class="flex-top">
               <h2 class="subtitle lower-text">Back End</h2>
               <mat-icon class="margin-right">storage</mat-icon>
@@ -216,7 +216,7 @@
             <!--<button mat-raised-button color="primary" class="view-tech">Check out our Back End tools</button>-->
             <div class="view-tech">
               <mat-accordion>
-                <mat-expansion-panel class="expansion-list" hideToggle>
+                <mat-expansion-panel [expanded]="expandOption == 2" (opened)="expandOption = 2" class="expansion-list" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title class="text">
                       Back End
@@ -238,7 +238,7 @@
               </mat-accordion>
             </div>
           </div>
-          <div class="column option">
+          <div class="column option" (mouseleave)="collapsePanel()">
             <div class="flex-top">
               <h2 class="subtitle lower-text">Hosting</h2>
               <mat-icon class="margin-right">cloud_done</mat-icon>
@@ -249,7 +249,7 @@
             <!--<button mat-raised-button color="primary" class="view-tech">Check out our Hosting options</button>-->
             <div class="view-tech">
               <mat-accordion>
-                <mat-expansion-panel class="expansion-list" hideToggle>
+                <mat-expansion-panel [expanded]="expandOption == 3" (opened)="expandOption = 3" class="expansion-list" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title class="text">
                       Hosting

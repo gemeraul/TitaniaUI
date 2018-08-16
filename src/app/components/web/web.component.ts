@@ -22,7 +22,7 @@ export class WebComponent implements OnInit {
   frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Bulma' }, { name: 'Angular Material' }];
   backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'Python' }, { name: 'MongoDB' }];
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
-
+  expandOption: number = 0;
   constructor(private _formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
@@ -70,6 +70,10 @@ export class WebComponent implements OnInit {
       duration: 2000,
     });
     this.messageSent = true;
+  }
+
+  collapsePanel() {
+    this.expandOption = 0;
   }
 
 }
