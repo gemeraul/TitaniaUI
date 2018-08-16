@@ -26,6 +26,7 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
 import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
 import { MobileComponent } from './components/mobile/mobile.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MobileComponent } from './components/mobile/mobile.component';
     TechnologiesComponent,
     ContactComponent,
     WebComponent,
-    MobileComponent
+    MobileComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,

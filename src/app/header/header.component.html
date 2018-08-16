@@ -13,7 +13,7 @@
   <div class="navbar-menu" [ngClass]="{'is-active': active}">
     <div class="navbar-start">
       <a routerLink="home" class="navbar-item" [ngClass]="{'is-wide': !active}">Titania</a>
-      <a class="navbar-item has-dropdown" [ngClass]="{'is-active': drop}" (click)="dropMenu()">
+      <a class="navbar-item has-dropdown" [ngClass]="{'is-active': drop, 'is-wide': !active}" (click)="dropMenu()">
         <a class="navbar-link" [ngClass]="{'is-wide': !active}">
           Services
         </a>

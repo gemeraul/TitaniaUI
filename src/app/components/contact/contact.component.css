@@ -79,3 +79,9 @@ mat-divider {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
+
+a.nostyle:link, a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
