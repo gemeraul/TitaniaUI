@@ -19,12 +19,16 @@
       </div>
       <div class="columns is-centered timer">
         <!-- this boxes wil be a component in future -->
-        <div class="column is-half optionBox">
-          <h2 class="option-title">00 Days 23 Hours 17 Min 04 Sec</h2>
-          <div class="info-separation">
-            <button mat-raised-button class="round-button" color="accent">Return to homepage</button>
+        <div class="column has-text-centered is-half optionBox">
+          <div class="columns is-centered" *ngIf="loading">
+            <mat-progress-spinner class="spinner" [color]="color" [mode]="mode">
+            </mat-progress-spinner>
           </div>
-          
+          <h2 *ngIf="!loading" class="option-title">{{days}} Days | {{hours}} Hours | {{minutes}} Min | {{seconds}} Sec</h2>
+          <div class="info-separation">
+            <button mat-raised-button class="round-button" color="accent" (click)="goHome()">Return to homepage</button>
+          </div>
+
         </div>
       </div>
     </div>

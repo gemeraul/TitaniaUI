@@ -114,3 +114,8 @@ mat-divider {
     vertical-align: middle;
 }
 
+.spinner {
+    margin: 20px;
+    margin-top: 30px;
+}
+

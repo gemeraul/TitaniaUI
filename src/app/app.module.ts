@@ -13,7 +13,8 @@ import {
   MatStepperModule,
   MatExpansionModule,
   MatSnackBarModule,
-  MatListModule } from '@angular/material';
+  MatListModule,
+  MatProgressSpinnerModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -28,6 +29,8 @@ import { WebComponent } from './components/web/web.component';
 import { MobileComponent } from './components/mobile/mobile.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
+// Services
+import { CountdownService } from './services/countdown.service';
 
 @NgModule({
   declarations: [
@@ -59,9 +62,10 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
     AppRoutingModule,
     MatExpansionModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [CountdownService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
