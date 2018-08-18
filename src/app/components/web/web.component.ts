@@ -16,7 +16,7 @@ export class WebComponent implements OnInit {
   fourthFormGroup: FormGroup;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
-  step = -1;
+  step = 0;
   email = new FormControl('', [Validators.required, Validators.email]);
   messageSent: boolean = false;
   frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Bulma' }, { name: 'Angular Material' }];
