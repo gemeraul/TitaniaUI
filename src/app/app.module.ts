@@ -23,10 +23,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AngularFontAwesomeModule } from '../../node_modules/angular-font-awesome';
-import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
-import { MobileComponent } from './components/mobile/mobile.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 // Services
@@ -38,10 +36,8 @@ import { CountdownService } from './services/countdown.service';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    TechnologiesComponent,
     ContactComponent,
     WebComponent,
-    MobileComponent,
     ComingSoonComponent
   ],
   imports: [
