@@ -13,7 +13,7 @@ export class ComingSoonComponent implements OnInit {
   hours: number;
   minutes: number;
   seconds: number;
-  color = 'accent';
+  color = 'primary';
   mode = 'indeterminate';
   loading: boolean = true;
 
