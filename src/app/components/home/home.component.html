@@ -51,7 +51,7 @@
           </div>
           <p>Custom developed innovations that can change the course of your industry.</p>
           <div class="info-separation">
-            <button mat-raised-button color="primary" class="view-info">Create your project</button>
+            <button mat-raised-button color="primary" class="view-info" (click)="createProject('design')">Create your project</button>
           </div>
         </div>
         <div class="column optionBox">
@@ -63,7 +63,7 @@
           </div>
           <p>Custom developed innovations that can change the course of your industry.</p>
           <div class="info-separation">
-            <button mat-raised-button color="primary" class="view-info" (click)="createProject('mobile')">Create your project</button>
+            <button mat-raised-button color="primary" class="view-info" (click)="createProject('portfolio')">Create your project</button>
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@
         </div>
         <div class="columns is-centered button-separation">
           <div class="column has-text-centered">
-            <button mat-raised-button color="accent" class="">Who are we?</button>
+            <button mat-raised-button color="accent" class="" (click)="createProject('ourteam')">Who are we?</button>
           </div>
         </div>
         <!-- Follow us section -->
