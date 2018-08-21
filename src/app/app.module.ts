@@ -34,6 +34,7 @@ import { CountdownService } from './services/countdown.service';
 // Firebase
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { DesignComponent } from './components/design/design.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AngularFireModule } from 'angularfire2';
     HomeComponent,
     ContactComponent,
     WebComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    DesignComponent
   ],
   imports: [
     BrowserModule,
