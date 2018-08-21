@@ -21,7 +21,7 @@
           <mat-form-field>
             <input matInput placeholder="Enter your email" [(ngModel)]="email" [formControl]="emailControl" required>
             <mat-icon matSuffix>email</mat-icon>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-error *ngIf="emailControl.invalid">{{getErrorMessage()}}</mat-error>
           </mat-form-field>
         </div>
 
