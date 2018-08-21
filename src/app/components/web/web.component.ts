@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+import { Observable } from 'rxjs';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-web',
@@ -23,7 +25,11 @@ export class WebComponent implements OnInit {
   backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'Python' }, { name: 'MongoDB' }];
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
   expandOption: number = 0;
-  constructor(private _formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
+  quotes: Observable<any[]>;
+
+  constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) { 
+    this.quotes = db.collection('/quotes').valueChanges();
+  }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({

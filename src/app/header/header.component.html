@@ -1,7 +1,7 @@
 <nav class="navbar is-blue">
   <!-- logo -->
   <div class="navbar-brand">
-    <a class="navbar-item" [ngClass]="{'is-wide': !active}">
+    <a routerLink="home" class="navbar-item" [ngClass]="{'is-wide': !active}">
       <img src="assets/img/titania-logo.svg">
     </a>
     <a role="button" class="navbar-burger" [ngClass]="{'is-active': active}" aria-label="menu" aria-expanded="false" (click)="activateMenu()">

@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -29,6 +30,10 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
 
 // Services
 import { CountdownService } from './services/countdown.service';
+
+// Firebase
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
   declarations: [
@@ -59,7 +64,9 @@ import { CountdownService } from './services/countdown.service';
     MatExpansionModule,
     MatSnackBarModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [CountdownService],
   bootstrap: [AppComponent]
