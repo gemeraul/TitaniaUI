@@ -35,11 +35,11 @@ export class WebComponent implements OnInit {
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
   expandOption: number = 0;
   // Firebase
-  private itemsCollection: AngularFirestoreCollection<Quote>;
+  private quotesCollection: AngularFirestoreCollection<Quote>;
   quotes: Observable<any[]>;
 
   constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) {
-    this.itemsCollection = db.collection<Quote>('quotes');
+    this.quotesCollection = db.collection<Quote>('quotes');
     // this.quotes = db.collection('/quotes').valueChanges();
   }
 
@@ -104,7 +104,7 @@ export class WebComponent implements OnInit {
   }
 
   saveQuote(quote: Quote) {
-    this.itemsCollection.add(quote);
+    this.quotesCollection.add(quote);
   }
 
 }

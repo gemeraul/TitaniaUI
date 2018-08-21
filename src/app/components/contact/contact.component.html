@@ -41,7 +41,7 @@
       </div>
 
       <button mat-raised-button matTooltip="Click this to send us an email" [matTooltipPosition]="'after'" aria-label="Button that submits info filled out in form above"
-        class="send" color="primary">
+        class="send" color="primary" (click)="openSnackBar()">
         Submit
       </button>
 
