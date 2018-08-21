@@ -40,7 +40,7 @@ export class WebComponent implements OnInit {
 
   constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) {
     this.itemsCollection = db.collection<Quote>('quotes');
-    this.quotes = db.collection('/quotes').valueChanges();
+    // this.quotes = db.collection('/quotes').valueChanges();
   }
 
   ngOnInit() {
@@ -93,7 +93,7 @@ export class WebComponent implements OnInit {
       deliveryDate: '12/12/19'
     }
     this.saveQuote(testQuote);
-    this.snackBar.open('Your message has been sent !', 'Ok', {
+    this.snackBar.open('Your message has been sent ! We will contact you soon.', 'Ok', {
       duration: 2000,
     });
     this.messageSent = true;
