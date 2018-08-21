@@ -2,7 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { Observable } from 'rxjs';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+
+export interface Quote {
+  name: string,
+  email: string,
+  phone: string,
+  industry: string,
+  projectDescription: string,
+  deliveryDate: string
+}
 
 @Component({
   selector: 'app-web',
@@ -25,9 +34,12 @@ export class WebComponent implements OnInit {
   backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'Python' }, { name: 'MongoDB' }];
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
   expandOption: number = 0;
+  // Firebase
+  private itemsCollection: AngularFirestoreCollection<Quote>;
   quotes: Observable<any[]>;
 
-  constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) { 
+  constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) {
+    this.itemsCollection = db.collection<Quote>('quotes');
     this.quotes = db.collection('/quotes').valueChanges();
   }
 
@@ -72,6 +84,15 @@ export class WebComponent implements OnInit {
   openSnackBar() {
     this.step++;
     console.log('Sending email beep boop...');
+    let testQuote = {
+      name: 'TestUser',
+      email: 'a@a',
+      phone: '123123123',
+      industry: 'Sports',
+      projectDescription: 'Nice on!',
+      deliveryDate: '12/12/19'
+    }
+    this.saveQuote(testQuote);
     this.snackBar.open('Your message has been sent !', 'Ok', {
       duration: 2000,
     });
@@ -80,6 +101,10 @@ export class WebComponent implements OnInit {
 
   collapsePanel() {
     this.expandOption = 0;
+  }
+
+  saveQuote(quote: Quote) {
+    this.itemsCollection.add(quote);
   }
 
 }
