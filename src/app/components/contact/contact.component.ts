@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
@@ -18,36 +18,55 @@ export interface Message {
 })
 export class ContactComponent implements OnInit {
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  // Contact Form
+  emailControl = new FormControl('', [Validators.required, Validators.email]);
+  contactFormGroup: FormGroup;
+  fullName: string = '';
+  email: string = '';
+  phone: string = '';
+  description: string = '';
+  message: Message;
+
   // Firebase
   private messageCollection: AngularFirestoreCollection<Message>;
   messages: Observable<any[]>;
 
-  constructor(db: AngularFirestore, public snackBar: MatSnackBar) { 
+  constructor(db: AngularFirestore, public snackBar: MatSnackBar, private _formBuilder: FormBuilder) { 
     this.messageCollection = db.collection<Message>('messages');
   }
 
   ngOnInit() {
+    this.contactFormGroup = this._formBuilder.group({
+      email: this.emailControl,
+      fullName: [null, Validators.required],
+      phone: [null],
+      description: [null, Validators.required],
+    });
   }
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-        this.email.hasError('email') ? 'Not a valid email' :
+    return this.emailControl.hasError('required') ? 'You must enter a value' :
+        this.emailControl.hasError('email') ? 'Not a valid email' :
             '';
   }
 
   openSnackBar() {
-    console.log('Sending email beep boop...');
-    let testMessage = {
-      name: 'TestUser',
-      email: 'a@a',
-      phone: '123123123',
-      projectDescription: 'Nice on!'
-    }
-    this.sendMessage(testMessage);
     this.snackBar.open('Your message has been sent ! We will contact you soon.', 'Ok', {
       duration: 2000,
     });
+  }
+
+  submitContactForm() {
+    console.log('Sending email beep boop...');
+    this.message = {
+      name: this.fullName,
+      email: this.email,
+      phone: this.phone,
+      projectDescription: this.description
+    }
+    this.sendMessage(this.message);
+    // TODO: Probably better to add this in sendMessage() as a resolve path of promise? 
+    this.openSnackBar();
   }
 
   sendMessage(message: Message) {

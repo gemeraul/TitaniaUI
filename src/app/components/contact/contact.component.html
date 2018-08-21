@@ -8,42 +8,43 @@
       </p>
       <mat-divider></mat-divider>
       <h2>Fill out the form below :</h2>
+      <form #heroForm="ngForm" [formGroup]="contactFormGroup">
+        <div class="level grouped-inputs">
+          <mat-form-field class="same-level">
+            <input matInput placeholder="Full name" required formControlName="fullName" [(ngModel)]="fullName">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
 
-      <div class="level grouped-inputs">
-        <mat-form-field class="same-level">
-          <input matInput placeholder="Full name" required>
-          <mat-icon matSuffix>person</mat-icon>
-        </mat-form-field>
+        </div>
 
-      </div>
+        <div class="level">
+          <mat-form-field>
+            <input matInput placeholder="Enter your email" [(ngModel)]="email" [formControl]="emailControl" required>
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
 
-      <div class="level">
-        <mat-form-field>
-          <input matInput placeholder="Enter your email" [formControl]="email" required>
-          <mat-icon matSuffix>email</mat-icon>
-          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-      </div>
+        <div class="level">
+          <mat-form-field hintLabel="Max 8 characters">
+            <input matInput #input maxlength="8" placeholder="Phone number" [(ngModel)]="phone" formControlName="phone">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
+          </mat-form-field>
+        </div>
 
-      <div class="level">
-        <mat-form-field hintLabel="Max 8 characters">
-          <input matInput #input maxlength="8" placeholder="Phone number">
-          <mat-icon matSuffix>phone</mat-icon>
-          <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
-        </mat-form-field>
-      </div>
+        <div class="level">
+          <mat-form-field class="full-width">
+            <textarea matTextareaAutosize matInput placeholder="Describe your project" [(ngModel)]="description" required formControlName="description"></textarea>
+            <mat-icon matSuffix>message</mat-icon>
+          </mat-form-field>
+        </div>
 
-      <div class="level">
-        <mat-form-field class="full-width">
-          <textarea matTextareaAutosize matInput placeholder="Describe your project" required></textarea>
-          <mat-icon matSuffix>message</mat-icon>
-        </mat-form-field>
-      </div>
-
-      <button mat-raised-button matTooltip="Click this to send us an email" [matTooltipPosition]="'after'" aria-label="Button that submits info filled out in form above"
-        class="send" color="primary" (click)="openSnackBar()">
+        <button mat-raised-button matTooltip="Click this to send us an email" [matTooltipPosition]="'after'" aria-label="Button that submits info filled out in form above"
+          class="send" color="primary" (click)="submitContactForm(); heroForm.reset()" [disabled]="!contactFormGroup.valid">
         Submit
       </button>
+      </form>
 
     </div>
     <!-- Follow us section -->

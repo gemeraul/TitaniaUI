@@ -20,16 +20,25 @@ export interface Quote {
 })
 export class WebComponent implements OnInit {
 
+  // Quote Form
   isLinear: boolean = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   fourthFormGroup: FormGroup;
+  fullName: string = '';
+  email: string = '';
+  phone: string = '';
+  industry: string = '';
+  description: string = '';
+  deliveryDate: string = '';
+  quote: Quote;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
   step = 0;
-  email = new FormControl('', [Validators.required, Validators.email]);
+  emailControl = new FormControl('', [Validators.required, Validators.email]);
   messageSent: boolean = false;
+  
   frontEndTools: Array<any> = [{ name: 'Angular 6' }, { name: 'React' }, { name: 'Bulma' }, { name: 'Angular Material' }];
   backEndTools: Array<any> = [{ name: 'NodeJs' }, { name: 'Python' }, { name: 'MongoDB' }];
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
@@ -45,7 +54,7 @@ export class WebComponent implements OnInit {
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      email: this.email,
+      email: this.emailControl,
       fullName: [null, Validators.required],
       phone: [null, Validators.required],
     });
@@ -76,23 +85,12 @@ export class WebComponent implements OnInit {
   }
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-      this.email.hasError('email') ? 'Not a valid email' :
+    return this.emailControl.hasError('required') ? 'You must enter a value' :
+      this.emailControl.hasError('email') ? 'Not a valid email' :
         '';
   }
 
   openSnackBar() {
-    this.step++;
-    console.log('Sending email beep boop...');
-    let testQuote = {
-      name: 'TestUser',
-      email: 'a@a',
-      phone: '123123123',
-      industry: 'Sports',
-      projectDescription: 'Nice on!',
-      deliveryDate: '12/12/19'
-    }
-    this.saveQuote(testQuote);
     this.snackBar.open('Your message has been sent ! We will contact you soon.', 'Ok', {
       duration: 2000,
     });
@@ -105,6 +103,22 @@ export class WebComponent implements OnInit {
 
   saveQuote(quote: Quote) {
     this.quotesCollection.add(quote);
+  }
+
+  submitQuote() {
+    console.log('Sending email beep boop...');
+    this.quote = {
+      name: this.fullName,
+      email: this.email,
+      phone: this.phone,
+      industry: this.industry,
+      projectDescription: this.description,
+      deliveryDate: this.deliveryDate
+    }
+    this.saveQuote(this.quote);
+    // TODO: Probably better to add this in saveQuote() as a resolve path of promise? 
+    this.step++;
+    this.openSnackBar();
   }
 
 }
