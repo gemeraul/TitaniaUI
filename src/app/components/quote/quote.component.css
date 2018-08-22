@@ -1,0 +1,36 @@
+.mat-form-field {
+    padding-right: .5em;
+}
+
+.hero.top-banner {
+    background-color: #f9f7f7;
+    color: #767782;
+}
+
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote {
+    color: #292a2f;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.separation-bottom {
+    margin-bottom: 3em;
+}
+
+.full-width {
+    width: 80%;
+}
