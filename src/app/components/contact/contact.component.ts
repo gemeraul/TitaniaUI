@@ -59,10 +59,10 @@ export class ContactComponent implements OnInit {
   submitContactForm() {
     console.log('Sending email beep boop...');
     this.message = {
-      name: this.fullName,
-      email: this.email,
-      phone: this.phone,
-      projectDescription: this.description
+      name: this.contactFormGroup.get('fullName').value,
+      email: this.contactFormGroup.get('email').value,
+      phone: this.contactFormGroup.get('phone').value,
+      projectDescription: this.contactFormGroup.get('description').value
     }
     this.sendMessage(this.message);
     // TODO: Probably better to add this in sendMessage() as a resolve path of promise? 

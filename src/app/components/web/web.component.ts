@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-web',
@@ -13,7 +14,7 @@ export class WebComponent implements OnInit {
   hostingTools: Array<any> = [{ name: 'AWS' }, { name: 'Google Cloud' }, { name: 'Firebase' }, { name: 'Private Servers' }];
   expandOption: number = 0;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     
@@ -21,6 +22,10 @@ export class WebComponent implements OnInit {
 
   collapsePanel() {
     this.expandOption = 0;
+  }
+
+  goToContact() {
+    this.router.navigateByUrl('/contact');
   }
 
 }

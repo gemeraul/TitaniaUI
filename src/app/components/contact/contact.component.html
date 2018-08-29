@@ -11,7 +11,7 @@
       <form #heroForm="ngForm" [formGroup]="contactFormGroup">
         <div class="level grouped-inputs">
           <mat-form-field class="same-level">
-            <input matInput placeholder="Full name" required formControlName="fullName" [(ngModel)]="fullName">
+            <input matInput placeholder="Full name" required formControlName="fullName">
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
@@ -19,7 +19,7 @@
 
         <div class="level">
           <mat-form-field>
-            <input matInput placeholder="Enter your email" [(ngModel)]="email" [formControl]="emailControl" required>
+            <input matInput placeholder="Enter your email" [formControl]="emailControl" required>
             <mat-icon matSuffix>email</mat-icon>
             <mat-error *ngIf="emailControl.invalid">{{getErrorMessage()}}</mat-error>
           </mat-form-field>
@@ -27,7 +27,7 @@
 
         <div class="level">
           <mat-form-field hintLabel="Max 8 characters">
-            <input matInput #input maxlength="8" placeholder="Phone number" [(ngModel)]="phone" formControlName="phone">
+            <input matInput #input maxlength="8" placeholder="Phone number" formControlName="phone">
             <mat-icon matSuffix>phone</mat-icon>
             <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
           </mat-form-field>
@@ -35,7 +35,7 @@
 
         <div class="level">
           <mat-form-field class="full-width">
-            <textarea matTextareaAutosize matInput placeholder="Describe your project" [(ngModel)]="description" required formControlName="description"></textarea>
+            <textarea matTextareaAutosize matInput placeholder="Describe your project" required formControlName="description"></textarea>
             <mat-icon matSuffix>message</mat-icon>
           </mat-form-field>
         </div>
