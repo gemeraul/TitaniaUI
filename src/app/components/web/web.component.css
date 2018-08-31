@@ -26,10 +26,6 @@
     transition: .5s ease;
 }
 
-.big-icon:hover  {
-    color: #f3d119;
-}
-
 .center-icon {
     text-align: center;
 }
@@ -97,7 +93,7 @@
 }
 
 .highlight-box:hover .highlight-text {
-    color: #b1970b;
+    color: #f3d119;
 }
 
 .highlight-text {
