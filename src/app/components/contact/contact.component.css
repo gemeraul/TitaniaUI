@@ -85,3 +85,13 @@ a.nostyle:link, a.nostyle:visited {
     color: inherit;
     cursor: auto;
 }
+
+.flex {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text-spaced {
+    letter-spacing: .2em;
+    font-weight: 100;
+}
