@@ -93,3 +93,9 @@ a.is-active a.navbar-link {
 a.navbar-burger {
     color:white;
 }
+
+a.nostyle:link, a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
