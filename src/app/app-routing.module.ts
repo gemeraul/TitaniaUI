@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component'
+import { DesignComponent } from './components/design/design.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,7 +12,7 @@ const routes: Routes = [
   { path: 'web', component: WebComponent },
   { path: 'portfolio', component: ComingSoonComponent },
   { path: 'ourteam', component: ComingSoonComponent },
-  { path: 'design', component: ComingSoonComponent },
+  { path: 'design', component: DesignComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '/home' }
 ]

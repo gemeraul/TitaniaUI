@@ -1,3 +1,161 @@
-<p>
-  design works!
-</p>
+<app-quote></app-quote>
+
+<section class="hero ">
+  <!-- this banner wil be a component in future -->
+  <div class="skills hero light-color">
+    <div class="hero-body highlight-box">
+      <div class="container">
+        <div class="columns is-centered">
+
+          <div class="column has-text-centered top-row">
+            <h1 class="title upper-text">UI/UX Design & Prototyping</h1>
+            <h2 class="subtitle lower-text">Innovate your industry</h2>
+          </div>
+
+        </div>
+        <div class="columns is-centered">
+          <div class="column"></div>
+          <div class="column ">
+            <p class=""><span class="highlight-text">Titania Tech</span> focuses on quality and performance for your web Application
+              project without leaving aside good <span class="highlight-text">UX
+              design</span> practices and site accessibility. We build robust and <span class="highlight-text">scalable</span>              applications using modern technologies which in turn allows us to implement the best <span class="highlight-text">features</span>              possible.
+            </p>
+          </div>
+          <div class="column center-icon">
+            <div><i class="fa fa-gg big-icon"></i></div>
+            <div class="separation"><button mat-raised-button color="accent" (click)="goToContact()">Contact Us</button></div>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero ">
+  <!-- this banner wil be a component in future -->
+  <div class="skills hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered top-row">
+            <h1 class="title upper-text">Why UI/UX Design & Prototyping?</h1>
+            <div class="columns is-centered">
+              <div class="column"></div>
+              <div class="column has-text-centered ">
+                <p class="">Titania Tech knows that building a succcessful application takes more than
+                  just a good backend. We work with you to understand your business requirements and 
+                  give you a product that follows the best practices of UI/UX design in a way your users
+                   can enjoy the experience.
+                </p>
+              </div>
+              <div class="column"></div>
+            </div>
+          </div>
+        </div>
+        <mat-divider class="separation-bottom"></mat-divider>
+        <div class="columns is-centered">
+          <div class="column option" (mouseleave)="collapsePanel()">
+            <div class="flex-top">
+              <h2 class="subtitle lower-text">UI/UX Design</h2>
+              <mat-icon class="margin-right">view_quilt</mat-icon>
+            </div>
+            <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
+              design practices and site accessibility. We build robust and scalble applications using modern technologies
+              which in turn allows us to implement the best features possible.</p>
+            <!--<button mat-raised-button color="primary" class="view-tech">Check out our Front End tools</button>-->
+            <div class="view-tech">
+              <mat-accordion>
+                <mat-expansion-panel [expanded]="expandOption == 1" (opened)="expandOption = 1" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                      UI/UX Design
+                    </mat-panel-title>
+                    <mat-panel-description >
+                      Check out our tools
+                    </mat-panel-description>
+                    <mat-icon>view_quilt</mat-icon>
+                  </mat-expansion-panel-header>
+                  <mat-divider class="tool-divider"></mat-divider>
+                  <mat-list>
+                    <h3 mat-subheader >Technologies</h3>
+                    <mat-list-item *ngFor="let tools of designTools">
+                      <mat-icon mat-list-icon class="tool-icon">build</mat-icon>
+                      <h4 mat-line >{{tools.name}}</h4>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <div class="column option" (mouseleave)="collapsePanel()">
+            <div class="flex-top">
+              <h2 class="subtitle lower-text">Prototyping</h2>
+              <mat-icon class="margin-right">view_carousel</mat-icon>
+            </div>
+            <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
+              design practices and site accessibility. We build robust and scalble applications using modern technologies
+              which in turn allows us to implement the best features possible.</p>
+            <!--<button mat-raised-button color="primary" class="view-tech">Check out our Back End tools</button>-->
+            <div class="view-tech">
+              <mat-accordion>
+                <mat-expansion-panel [expanded]="expandOption == 2" (opened)="expandOption = 2" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                      Prototyping
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Check out our tools
+                    </mat-panel-description>
+                    <mat-icon>view_carousel</mat-icon>
+                  </mat-expansion-panel-header>
+                  <mat-divider class="tool-divider"></mat-divider>
+                  <mat-list>
+                    <h3 mat-subheader >Technologies</h3>
+                    <mat-list-item *ngFor="let tools of prototypeTools">
+                      <mat-icon mat-list-icon class="tool-icon">build</mat-icon>
+                      <h4 mat-line >{{tools.name}}</h4>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <div class="column option" (mouseleave)="collapsePanel()">
+            <div class="flex-top">
+              <h2 class="subtitle lower-text">Accessibility</h2>
+              <mat-icon class="margin-right">accessibility_new</mat-icon>
+            </div>
+            <p class="">Titania Tech focuses on quality and performance for your web Application project without leaving aside good UX
+              design practices and site accessibility. We build robust and scalble applications using modern technologies
+              which in turn allows us to implement the best features possible.</p>
+            <!--<button mat-raised-button color="primary" class="view-tech">Check out our Hosting options</button>-->
+            <div class="view-tech">
+              <mat-accordion>
+                <mat-expansion-panel [expanded]="expandOption == 3" (opened)="expandOption = 3" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                      Accessibility
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Check out our tools
+                    </mat-panel-description>
+                    <mat-icon>accessibility_new</mat-icon>
+                  </mat-expansion-panel-header>
+                  <mat-divider class="tool-divider"></mat-divider>
+                  <mat-list>
+                    <h3 mat-subheader>Standards</h3>
+                    <mat-list-item *ngFor="let tools of accessiblityTools">
+                      <mat-icon mat-list-icon class="tool-icon">build</mat-icon>
+                      <h4 mat-line>{{tools.name}}</h4>
+                    </mat-list-item>
+                  </mat-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

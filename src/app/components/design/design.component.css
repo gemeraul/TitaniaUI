@@ -1,0 +1,98 @@
+.light-color {
+    background-color: #e5ecee;
+    background-image: url('../../../assets/img/joel3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.highlight-box:hover .highlight-text {
+    color: #f3d119;
+}
+
+.highlight-text {
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+.top-row {
+    margin-bottom: 2em;
+}
+
+.upper-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.lower-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.center-icon {
+    text-align: center;
+}
+
+.big-icon {
+    font-size: 8em;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.separation {
+    margin-top: 1.5em;
+}
+
+.separation-bottom {
+    margin-bottom: 3em;
+}
+
+.option:hover .view-tech {
+    transform: translateY(0);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.option {
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.option:hover {
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,.1);
+}
+
+.flex-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.margin-right {
+    margin-right: .5em;
+}
+
+.view-tech {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px);
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+.tool-icon {
+  font-size: 1em !important;
+  padding-top: .6em !important;
+}
