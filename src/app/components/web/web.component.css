@@ -105,18 +105,9 @@
     transition: 1s ease;
 }
 
-.expansion-list {
-    background-color: #673ab7;
-    color: white;
-}
-
-.expansion-list .text {
-    color: white;
-}
-
 .tool-icon {
-  font-size: .5em;
-  color: white;
+  font-size: 1em !important;
+  padding-top: .6em !important;
 }
 
 .tool-divider {
