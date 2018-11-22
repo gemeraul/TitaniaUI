@@ -15,7 +15,7 @@ export class ComingSoonComponent implements OnInit {
   seconds: number;
   color = 'primary';
   mode = 'indeterminate';
-  loading: boolean = true;
+  loading = true;
 
   constructor(private countdownService: CountdownService, private router: Router) {
     this.countdownService.createCountdownService()

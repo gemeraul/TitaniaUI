@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 
 export interface Quote {
-  name: string,
-  email: string,
-  phone: string,
-  industry: string,
-  projectDescription: string,
-  deliveryDate: string
+  name: string;
+  email: string;
+  phone: string;
+  industry: string;
+  projectDescription: string;
+  deliveryDate: string;
 }
 
 @Component({
@@ -21,29 +21,29 @@ export interface Quote {
 export class QuoteComponent implements OnInit {
 
   // Quote Form
-  isLinear: boolean = true;
+  isLinear = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
   fourthFormGroup: FormGroup;
-  fullName: string = '';
-  email: string = '';
-  phone: string = '';
-  industry: string = '';
-  description: string = '';
-  deliveryDate: string = '';
+  fullName = '';
+  email = '';
+  phone = '';
+  industry = '';
+  description = '';
+  deliveryDate = '';
   quote: Quote;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
   step = 0;
   emailControl = new FormControl('', [Validators.required, Validators.email]);
-  messageSent: boolean = false;
+  messageSent = false;
 
   // Firebase
   private quotesCollection: AngularFirestoreCollection<Quote>;
   quotes: Observable<any[]>;
 
-  constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) { 
+  constructor(db: AngularFirestore, private _formBuilder: FormBuilder, public snackBar: MatSnackBar) {
     this.quotesCollection = db.collection<Quote>('quotes');
   }
 
@@ -105,9 +105,9 @@ export class QuoteComponent implements OnInit {
       industry: this.secondFormGroup.get('industry').value,
       projectDescription: this.thirdFormGroup.get('description').value,
       deliveryDate: this.fourthFormGroup.get('date').value,
-    }
+    };
     this.saveQuote(this.quote);
-    // TODO: Probably better to add this in saveQuote() as a resolve path of promise? 
+    // TODO: Probably better to add this in saveQuote() as a resolve path of promise?
     this.step++;
     this.openSnackBar();
   }
