@@ -105,21 +105,25 @@ p.description-text span {
 .linkedin {
     background-color: #365dd0;
     color: white;
+    border: 1px solid #573154;
 }
 
 .twitter {
     background-color: #38A1F3;
     color: white;
+    border: 1px solid #573154;
 }
 
 .facebook {
     background-color: #3273dc;
     color: white;
+    border: 1px solid #573154;
 }
 
 .instagram {
     background-color: #f1537d;
     color: white;
+    border: 1px solid #573154;
 }
 
 /* Gray Scale */
