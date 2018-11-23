@@ -24,24 +24,12 @@ mat-divider {
     margin-top: 1em;
 }
 
-.level {
-    margin-bottom: .5em;
-}
-
 .send {
-    width: 20%;  
+    width: 70%;  
 }
 
 .full-width {
-    width: 60%;
-}
-
-.grouped-inputs {
-    justify-content: left;
-}
-
-.same-level {
-    margin-right: 2%;    
+    width: 70%;
 }
 
 .title-option {

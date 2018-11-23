@@ -14,7 +14,9 @@ import {
   MatExpansionModule,
   MatSnackBarModule,
   MatListModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatDialogModule
 } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,6 +39,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { DesignComponent } from './components/design/design.component';
 import { QuoteComponent } from './components/quote/quote.component';
+import { OurTeamComponent } from './components/our-team/our-team.component';
+import { PersonCardComponent } from './components/person-card/person-card.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,9 @@ import { QuoteComponent } from './components/quote/quote.component';
     WebComponent,
     ComingSoonComponent,
     DesignComponent,
-    QuoteComponent
+    QuoteComponent,
+    OurTeamComponent,
+    PersonCardComponent
   ],
   imports: [
     BrowserModule,
@@ -70,10 +76,15 @@ import { QuoteComponent } from './components/quote/quote.component';
     MatSnackBarModule,
     MatListModule,
     MatProgressSpinnerModule,
+    MatCardModule,
+    MatDialogModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
   providers: [CountdownService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    PersonCardComponent
+  ],
 })
 export class AppModule { }

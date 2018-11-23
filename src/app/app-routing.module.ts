@@ -5,6 +5,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { WebComponent } from './components/web/web.component';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component'
 import { DesignComponent } from './components/design/design.component';
+import { OurTeamComponent } from './components/our-team/our-team.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,8 +15,9 @@ const routes: Routes = [
   { path: 'ourteam', component: ComingSoonComponent },
   { path: 'design', component: DesignComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'team', component: OurTeamComponent },
   { path: '**', redirectTo: '/home' }
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

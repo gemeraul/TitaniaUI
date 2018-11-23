@@ -11,56 +11,78 @@
           </div>
         </div>
       </div>
-      <h1>Contact Us</h1>
-      <p class="">We are more than excited to here from you on what cool projects we can work together. Send us a message with a description
-        of what your project entails and we will respond as soon as possible with a quick summary of what we could plan on
-        building.
-      </p>
+      <div class="columns is-centered">
+        <div class="column is-8 has-text-centered">
+          <h1>Contact Us</h1>
+          <p class="">We are more than excited to hear from you on what cool projects we can work together. Send us a
+            message with a description of what your project entails and we will respond as soon as possible with a
+            quick
+            summary of what we could plan on building.
+          </p>
+        </div>
+      </div>
       <mat-divider></mat-divider>
-      <h2>Fill out the form below :</h2>
-      <form #heroForm="ngForm" [formGroup]="contactFormGroup">
-        <div class="level grouped-inputs">
-          <mat-form-field class="same-level">
-            <input matInput placeholder="Full name" required formControlName="fullName">
-            <mat-icon matSuffix>person</mat-icon>
-          </mat-form-field>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2>Fill out the form below :</h2>
+          <form #heroForm="ngForm" [formGroup]="contactFormGroup">
+            <div class="columns is-centered">
+              <div class="column is-4">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Full name" required formControlName="fullName">
+                  <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+              </div>
+            </div>
 
+            <div class="columns is-centered">
+              <div class="column is-4">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Enter your email" [formControl]="emailControl" required>
+                  <mat-icon matSuffix>email</mat-icon>
+                  <mat-error *ngIf="emailControl.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-4">
+                <mat-form-field hintLabel="Max 8 characters" class="full-width">
+                  <input matInput #input maxlength="8" placeholder="Phone number" formControlName="phone">
+                  <mat-icon matSuffix>phone</mat-icon>
+                  <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-4">
+                <mat-form-field class="full-width">
+                  <textarea matTextareaAutosize matInput placeholder="Describe your project" required formControlName="description"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-4">
+                <button mat-raised-button matTooltip="Click here to send us an email" [matTooltipPosition]="'after'"
+                  aria-label="Button that submits info filled out in form above" class="send" color="primary" (click)="submitContactForm(); heroForm.reset()"
+                  [disabled]="!contactFormGroup.valid">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+          </form>
         </div>
-
-        <div class="level">
-          <mat-form-field>
-            <input matInput placeholder="Enter your email" [formControl]="emailControl" required>
-            <mat-icon matSuffix>email</mat-icon>
-            <mat-error *ngIf="emailControl.invalid">{{getErrorMessage()}}</mat-error>
-          </mat-form-field>
-        </div>
-
-        <div class="level">
-          <mat-form-field hintLabel="Max 8 characters">
-            <input matInput #input maxlength="8" placeholder="Phone number" formControlName="phone">
-            <mat-icon matSuffix>phone</mat-icon>
-            <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
-          </mat-form-field>
-        </div>
-
-        <div class="level">
-          <mat-form-field class="full-width">
-            <textarea matTextareaAutosize matInput placeholder="Describe your project" required formControlName="description"></textarea>
-            <mat-icon matSuffix>message</mat-icon>
-          </mat-form-field>
-        </div>
-
-        <button mat-raised-button matTooltip="Click this to send us an email" [matTooltipPosition]="'after'" aria-label="Button that submits info filled out in form above"
-          class="send" color="primary" (click)="submitContactForm(); heroForm.reset()" [disabled]="!contactFormGroup.valid">
-        Submit
-      </button>
-      </form>
+      </div>
+      <mat-divider></mat-divider>
 
     </div>
     <!-- Follow us section -->
     <div class="columns is-centered">
       <div class="column has-text-centered title-option">
-        Follow us here:
+        Follow us here
       </div>
     </div>
     <div class="columns is-centered">
@@ -72,7 +94,7 @@
         <a mat-fab class="follow-icon center twitter" href="https://twitter.com/TechTitania" target="_blank">
           <i class="fa fa-twitter"></i>
         </a>
-        <a mat-fab class="follow-icon google" href="https://www.linkedin.com/company/titania-tech/" target="_blank">
+        <a mat-fab class="follow-icon linkedin" href="https://www.linkedin.com/company/titania-tech/" target="_blank">
           <i class="fa fa-linkedin"></i>
         </a>
       </div>
