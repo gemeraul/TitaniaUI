@@ -58,6 +58,7 @@ p.description-text span {
     border-radius: 2px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 2em;
     cursor: pointer;
 }
 
@@ -68,6 +69,7 @@ p.description-text span {
     flex-shrink: 0;
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
+    margin: 0 auto;
     margin-top: 1em;
     -webkit-filter: grayscale(0%);
 	filter: grayscale(0%);
@@ -89,7 +91,7 @@ p.description-text span {
 }
 
 .person-avatar.eunice {
-    background-image: url('../../../assets/img/raul.jpeg');
+    background-image: url('../../../assets/img/eunice.jpeg');
 }
 
 .avatar {
@@ -97,6 +99,10 @@ p.description-text span {
     justify-content: center;
 }
 
+.profiles {
+    display: flex;
+    justify-content: center;
+}
 .center-button {
     margin-left: 1em;
     margin-right: 1em;
