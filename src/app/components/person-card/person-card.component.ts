@@ -6,6 +6,10 @@ export interface PersonCardParams {
   title: string;
   experience: string;
   tech_list: Array<string>;
+  int_title?: string;
+  links_title?: string;
+  int_text?: string;
+  links_urls?: Array<string>;
 }
 
 @Component({
@@ -18,6 +22,10 @@ export class PersonCardComponent implements OnInit {
   name: string;
   experience: string;
   tech_list: Array<string>;
+  int_title: string;
+  links_title: string;
+  int_text: string;
+  links_urls: Array<any>;
 
   constructor(
     @Optional() public matDialogRef: MatDialogRef<PersonCardComponent>,
