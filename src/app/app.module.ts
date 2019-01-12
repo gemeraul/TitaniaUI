@@ -37,6 +37,7 @@ import { CountdownService } from './services/countdown.service';
 // Firebase
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+
 import { DesignComponent } from './components/design/design.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';

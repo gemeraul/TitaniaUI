@@ -71,15 +71,15 @@ p.description-text span {
     background-size: cover;
     margin: 0 auto;
     margin-top: 1em;
-    -webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
 
-.person-avatar:hover {
-    -webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+.person-card:hover .person-avatar {
+    -webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
 }
 
 .person-avatar.raul {

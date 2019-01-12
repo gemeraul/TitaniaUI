@@ -6,7 +6,7 @@ export class CountdownService {
 
   constructor() { }
 
-  endDate: Date = new Date(2018, 11, 24);
+  endDate: Date = new Date(2019, 0, 24);
 
   createCountdownService(): Observable<number> {
 

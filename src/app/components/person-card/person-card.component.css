@@ -47,14 +47,29 @@ p {
 
 .person-avatar.raul {
     background-image: url('../../../assets/img/raulfun.jpeg');
- }
+}
+
+.person-avatar.andres {
+    background-image: url('../../../assets/img/andres.jpg');
+}
+
+.person-avatar.eunice {
+    background-image: url('../../../assets/img/eunice.jpeg');
+}
 
  .twitch {
     background-color: #7a43c4;
     color: white;
+    margin-right: 1em;
+}
+
+.opgg {
+    background-color: white;
+    color: black;
 }
 
 .title-name {
     font-weight: 300;
-    font-size: 2em;
+    font-size: 1.8em;
+    margin-bottom: 0;
 }

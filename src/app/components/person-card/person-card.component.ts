@@ -2,7 +2,10 @@ import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface PersonCardParams {
-  nombre: string;
+  name: string;
+  title: string;
+  experience: string;
+  tech_list: Array<string>;
 }
 
 @Component({
@@ -12,7 +15,9 @@ export interface PersonCardParams {
 })
 export class PersonCardComponent implements OnInit {
 
-  nombre: string;
+  name: string;
+  experience: string;
+  tech_list: Array<string>;
 
   constructor(
     @Optional() public matDialogRef: MatDialogRef<PersonCardComponent>,
