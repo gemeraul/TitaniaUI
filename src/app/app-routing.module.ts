@@ -12,10 +12,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'web', component: WebComponent },
   { path: 'portfolio', component: ComingSoonComponent },
-  { path: 'ourteam', component: ComingSoonComponent },
+  { path: 'ourteam', component: OurTeamComponent },
   { path: 'design', component: DesignComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'team', component: OurTeamComponent },
   { path: '**', redirectTo: '/home' }
 ];
 
