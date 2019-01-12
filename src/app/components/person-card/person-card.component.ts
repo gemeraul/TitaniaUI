@@ -20,6 +20,7 @@ export interface PersonCardParams {
 export class PersonCardComponent implements OnInit {
 
   name: string;
+  title: string;
   experience: string;
   tech_list: Array<string>;
   int_title: string;
