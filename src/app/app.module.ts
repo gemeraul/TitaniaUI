@@ -42,6 +42,7 @@ import { DesignComponent } from './components/design/design.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
 import { PersonCardComponent } from './components/person-card/person-card.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { PersonCardComponent } from './components/person-card/person-card.compon
     DesignComponent,
     QuoteComponent,
     OurTeamComponent,
-    PersonCardComponent
+    PersonCardComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
