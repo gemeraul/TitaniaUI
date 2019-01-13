@@ -145,6 +145,7 @@ mat-divider {
 }
 
 .icon-quote {
+    cursor: pointer;
     -webkit-transition: .7s ease;
     transition: .7s ease;
 }

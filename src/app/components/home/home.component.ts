@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/' + type);
   }
 
+  scrollToOptions() {
+    document.getElementById("optionsElem").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
 }
