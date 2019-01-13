@@ -21,11 +21,8 @@ export interface Quote {
 export class QuoteComponent implements OnInit {
 
   // Quote Form
-  isLinear = true;
+  isLinear = false;
   firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
-  thirdFormGroup: FormGroup;
-  fourthFormGroup: FormGroup;
   fullName = '';
   email = '';
   phone = '';
@@ -37,6 +34,11 @@ export class QuoteComponent implements OnInit {
   maxDate = new Date(2020, 0, 1);
   step = 0;
   emailControl = new FormControl('', [Validators.required, Validators.email]);
+  fullNameControl = new FormControl('', Validators.required);
+  phoneControl = new FormControl('', Validators.required);
+  industryControl = new FormControl('', Validators.required);
+  descriptionControl = new FormControl('', Validators.required);
+  dateControl = new FormControl('', Validators.required);
   messageSent = false;
 
   // Firebase
@@ -52,17 +54,8 @@ export class QuoteComponent implements OnInit {
       email: this.emailControl,
       fullName: [null, Validators.required],
       phone: [null, Validators.required],
-    });
-
-    this.secondFormGroup = this._formBuilder.group({
-      industry: [null, Validators.required]
-    });
-
-    this.thirdFormGroup = this._formBuilder.group({
-      description: [null, Validators.required]
-    });
-
-    this.fourthFormGroup = this._formBuilder.group({
+      industry: [null, Validators.required],
+      description: [null, Validators.required],
       date: [null, Validators.required]
     });
   }
@@ -79,9 +72,14 @@ export class QuoteComponent implements OnInit {
     this.step--;
   }
 
-  getErrorMessage() {
+  getEmailErrorMessage() {
     return this.emailControl.hasError('required') ? 'You must enter a value' :
       this.emailControl.hasError('email') ? 'Not a valid email' :
+        '';
+  }
+
+  getRequiredErrorMessage() {
+    return this.fullNameControl.hasError('required') ? 'You must enter a value' :
         '';
   }
 
@@ -99,12 +97,12 @@ export class QuoteComponent implements OnInit {
   submitQuote() {
     console.log('Sending email beep boop...');
     this.quote = {
-      name: this.firstFormGroup.get('fullName').value,
-      email: this.firstFormGroup.get('email').value,
-      phone: this.firstFormGroup.get('phone').value,
-      industry: this.secondFormGroup.get('industry').value,
-      projectDescription: this.thirdFormGroup.get('description').value,
-      deliveryDate: this.fourthFormGroup.get('date').value,
+      name: this.fullNameControl.value,
+      email: this.emailControl.value,
+      phone: this.phoneControl.value,
+      industry: this.industryControl.value,
+      projectDescription: this.descriptionControl.value,
+      deliveryDate: this.dateControl.value,
     };
     this.saveQuote(this.quote);
     // TODO: Probably better to add this in saveQuote() as a resolve path of promise?

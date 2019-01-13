@@ -7,9 +7,10 @@
     </div>
     <div class="columns separation-bottom">
       <div class="column ">
-        <mat-accordion class="example-headers-align">
-          <form [formGroup]="firstFormGroup">
-            <mat-expansion-panel class="form-group" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+
+          <mat-accordion class="example-headers-align">
+
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   Personal data
@@ -21,26 +22,25 @@
               </mat-expansion-panel-header>
 
               <mat-form-field>
-                <input matInput placeholder="Full Name" required formControlName="fullName">
+                <input matInput placeholder="Full Name" [formControl]="fullNameControl">
+                <mat-error *ngIf="fullNameControl.invalid">{{getRequiredErrorMessage()}}</mat-error>
               </mat-form-field>
 
               <mat-form-field>
-                <input matInput placeholder="Enter your email" [formControl]="emailControl" required>
-                <mat-error *ngIf="emailControl.invalid">{{getErrorMessage()}}</mat-error>
+                <input matInput placeholder="Enter your email" [formControl]="emailControl">
+                <mat-error *ngIf="emailControl.invalid">{{getEmailErrorMessage()}}</mat-error>
               </mat-form-field>
 
               <mat-form-field hintLabel="Max 8 characters">
-                <input matInput #input maxlength="8" placeholder="Phone number" formControlName="phone">
+                <input matInput #input maxlength="8" placeholder="Phone number" [formControl]="phoneControl">
                 <mat-hint align="end">{{input.value?.length || 0}}/8</mat-hint>
               </mat-form-field>
 
               <mat-action-row>
-                <button mat-button color="primary" (click)="nextStep()" [disabled]="!firstFormGroup.valid">Next</button>
+                <button mat-button color="primary" (click)="nextStep()">Next</button>
               </mat-action-row>
             </mat-expansion-panel>
-          </form>
 
-          <form [formGroup]="secondFormGroup">
             <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -53,18 +53,17 @@
               </mat-expansion-panel-header>
 
               <mat-form-field>
-                <input matInput placeholder="Industry" formControlName="industry">
+                <input matInput placeholder="Industry" [formControl]="industryControl">
                 <mat-hint align="start">eg. Retail, Food Service</mat-hint>
+                <mat-error *ngIf="emailControl.invalid">{{getRequiredErrorMessage()}}</mat-error>
               </mat-form-field>
 
               <mat-action-row>
                 <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                <button mat-button color="primary" (click)="nextStep()" [disabled]="!secondFormGroup.valid">Next</button>
+                <button mat-button color="primary" (click)="nextStep()">Next</button>
               </mat-action-row>
             </mat-expansion-panel>
-          </form>
 
-          <form [formGroup]="thirdFormGroup">
             <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -77,17 +76,16 @@
               </mat-expansion-panel-header>
 
               <mat-form-field class="full-width">
-                <textarea  matInput placeholder="Describe your project" required formControlName="description"></textarea>
+                <textarea matInput placeholder="Describe your project" [formControl]="descriptionControl"></textarea>
+                <mat-error *ngIf="emailControl.invalid">{{getRequiredErrorMessage()}}</mat-error>
               </mat-form-field>
 
               <mat-action-row>
                 <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                <button mat-button color="primary" (click)="nextStep()" [disabled]="!thirdFormGroup.valid">Next</button>
+                <button mat-button color="primary" (click)="nextStep()">Next</button>
               </mat-action-row>
             </mat-expansion-panel>
-          </form>
 
-          <form [formGroup]="fourthFormGroup">
             <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -100,26 +98,25 @@
               </mat-expansion-panel-header>
 
               <mat-form-field>
-                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Select a date" readonly formControlName="date">
+                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Select a date"
+                  readonly [formControl]="dateControl">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker touchUi #picker></mat-datepicker>
               </mat-form-field>
 
               <mat-action-row>
                 <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                <button mat-button 
-                  color="primary" 
-                  (click)="submitQuote()"
-                  matTooltip="Click this to send us an email"
-                  [matTooltipDisabled]="!messageSent"
-                  [disabled]="!fourthFormGroup.valid || messageSent">
+                <button mat-button color="primary" (click)="submitQuote()" matTooltip="Click this to send us an email"
+                  [matTooltipDisabled]="!messageSent" [disabled]="messageSent || (fullNameControl.invalid || emailControl.invalid || phoneControl.invalid || industryControl.invalid || descriptionControl.invalid || dateControl.invalid)">
                   Submit
                 </button>
               </mat-action-row>
             </mat-expansion-panel>
-          </form>
 
-        </mat-accordion>
+
+          </mat-accordion>
+
+
       </div>
     </div>
   </div>
