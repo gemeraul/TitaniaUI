@@ -143,3 +143,8 @@ p.description-text span {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
+
+mat-divider.separate-margin {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

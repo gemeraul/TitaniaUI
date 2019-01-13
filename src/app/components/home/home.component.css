@@ -204,35 +204,6 @@ mat-divider {
     background: rgba(21, 60, 105, 0.5);
 }
 
-.follow-icon.center {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    
-}
-
-.follow-icon.google:hover {
-    background-color: #d65858;
-    color: white;
-}
-
-.follow-icon.twitter:hover {
-    background-color: #4daaef;
-    color: white;
-}
-
-.follow-icon.linkedin:hover {
-    background-color: #214fd6;
-    color: white;
-}
-
-.follow-icon {
-    background-color: white;
-    color: #fcd840;
-    font-size: 1.2em;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-}
-
 a.nostyle:link, a.nostyle:visited {
     text-decoration: inherit;
     color: inherit;
