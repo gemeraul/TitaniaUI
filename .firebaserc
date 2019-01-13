@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "titania-website"
+    "default": "titania-website",
+    "TitaniaUI": "titania-website"
   }
 }
