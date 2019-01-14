@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+
+export interface Portfolio { name: string; loveCount: number; }
+export interface PortfolioId extends Portfolio { id: string; }
 
 @Component({
   selector: 'app-portfolio',
@@ -9,24 +16,60 @@ import { MatSnackBar } from '@angular/material';
 })
 export class PortfolioComponent implements OnInit {
 
-  lovedCount = 4;
+  lovedCounters = [];
+  test;
+  // Firebase
+  private portfolioCollection: AngularFirestoreCollection<Portfolio>;
+  portfolios: PortfolioId[];
+  item: Observable<Portfolio>;
 
-  constructor(private router: Router, public snackBar: MatSnackBar) { }
+  constructor(private db: AngularFirestore, private router: Router, public snackBar: MatSnackBar) {
+    this.portfolioCollection = db.collection<Portfolio>('portfolios');
+    // this.portfolios = this.portfolioCollection.valueChanges();
+    // this.portfolios.subscribe(data => {
+    //   this.lovedCounters = data;
+    // });
+    // this.portfolios = this.portfolioCollection.snapshotChanges().pipe(
+    //   map(actions => {
+    //     return actions.map(a => {
+    //       const data = a.payload.doc.data() as Portfolio;
+    //       const id = a.payload.doc.id;
+    //       return { id, ...data };
+    //     });
+    //   }));
+    this.portfolioCollection.snapshotChanges()
+      .pipe(
+        map(actions => {
+          return actions.map(a => {
+            const data = a.payload.doc.data() as Portfolio;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        }))
+      .subscribe(result => this.portfolios = result);
+  }
 
   ngOnInit() {
+
   }
 
   goToContact() {
     this.router.navigateByUrl('/contact');
   }
 
-  loveProduct() {
-    this.lovedCount++;
-    this.openSnackBar()
+  loveProduct(item: PortfolioId, count) {
+    if (item) {
+      count++;
+      this.db.collection('portfolios').doc(item.id).update({ loveCount: count, name: 'inventory' })
+        .then(result => {
+          this.openSnackBar();
+        });
+    }
+
   }
 
   openSnackBar() {
-    this.snackBar.open('Thank you for your interest!', ':)', {
+    this.snackBar.open('Thank you for your interest!', '=)', {
       duration: 4000,
     });
   }

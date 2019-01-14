@@ -14,11 +14,10 @@
         <div class="columns is-centered">
 
           <div class="column is-3">
-            <p><span class="highlight-text">Titania Tech</span> focuses on quality and performance for your
-              Web Application project without leaving aside good <span class="highlight-text">UX design</span>
-              practices and site accessibility. We build robust and <span class="highlight-text">scalable</span>
-              applications using modern technologies which in turn allows us to implement the best <span class="highlight-text">features</span>
-              possible.
+            <p>Titania Tech's offers pre-built solutions systems that can be
+              easily integrated and expanded on depending on your exact business needs. We can customize this
+              software as much or as little as you require. The time required to implement a solution like this is
+              greatly reduced due to us already having a robust backbone to start with.
             </p>
           </div>
           <div class="column is-2 center-icon">
@@ -39,10 +38,10 @@
         <div class="columns is-centered">
           <div class="column is-5 has-text-centered top-row">
             <h2 class="subtitle lower-text">Inventory Management System</h2>
-            <p class="light-text">Titania Tech's offers a pre-built inventory management system that can be
-              easily integrated and expanded on depending on your exact business needs. We can customize this
-              software as much or as little as you require. The best part is that the time required to implement a
-              solution like this is greatly reduced due to us already having a robust backbone to start with.</p>
+            <p class="light-text">Our Inventory Management System has different built in modules that you can use to
+              automate slow and inefficient processes. The main modules of this system are login, an inventory
+              dashboard, item cards and insert items form. The Front End is built with Angular 7 and the Back End is
+              written in Nodejs.</p>
           </div>
         </div>
         <div class="columns is-centered">
@@ -90,12 +89,12 @@
 
         </div>
         <div class="columns is-centered">
-          <div class="column is-3 has-text-centered">
+          <div class="column is-2 has-text-centered">
             <p class="light-text fav">I absolutely need this!</p>
-            <button mat-fab class="favorite-button" matTooltip="Let's talk!" (click)="loveProduct()">
+            <button mat-fab class="favorite-button" matTooltip="Let's talk!" [matTooltipPosition]="'after'" (click)="loveProduct(portfolios[0], portfolios[0].loveCount)">
               <mat-icon aria-label="Icon with a heart icon">favorite</mat-icon>
             </button>
-            <p class="light-text count">This product has been loved {{lovedCount}} times.</p>
+            <p *ngIf="portfolios.length > 0" class="light-text count">This product has been loved {{portfolios[0].loveCount}} times.</p>
           </div>
         </div>
       </div>
