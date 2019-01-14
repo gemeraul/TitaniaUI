@@ -36,8 +36,8 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
 import { CountdownService } from './services/countdown.service';
 
 // Firebase
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { DesignComponent } from './components/design/design.component';
 import { QuoteComponent } from './components/quote/quote.component';
