@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,13 +9,26 @@ import { Router } from '@angular/router';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  lovedCount = 4;
+
+  constructor(private router: Router, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
   goToContact() {
     this.router.navigateByUrl('/contact');
+  }
+
+  loveProduct() {
+    this.lovedCount++;
+    this.openSnackBar()
+  }
+
+  openSnackBar() {
+    this.snackBar.open('Thank you for your interest!', ':)', {
+      duration: 4000,
+    });
   }
 
 }
