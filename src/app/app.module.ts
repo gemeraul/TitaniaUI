@@ -16,7 +16,8 @@ import {
   MatListModule,
   MatProgressSpinnerModule,
   MatCardModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTabsModule
 } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -83,6 +84,7 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     MatProgressSpinnerModule,
     MatCardModule,
     MatDialogModule,
+    MatTabsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],

@@ -1,3 +1,103 @@
-<p>
-  portfolio works!
-</p>
+<section class="hero">
+
+  <div class="hero light-color">
+    <div class="hero-body highlight-box">
+      <div class="container">
+        <div class="columns is-centered">
+
+          <div class="column has-text-centered top-row">
+            <h1 class="title upper-text">Titania Product Portfolio</h1>
+            <h2 class="subtitle lower-text">Pre-built solutions</h2>
+          </div>
+
+        </div>
+        <div class="columns is-centered">
+
+          <div class="column is-3">
+            <p><span class="highlight-text">Titania Tech</span> focuses on quality and performance for your
+              Web Application project without leaving aside good <span class="highlight-text">UX design</span>
+              practices and site accessibility. We build robust and <span class="highlight-text">scalable</span>
+              applications using modern technologies which in turn allows us to implement the best <span class="highlight-text">features</span>
+              possible.
+            </p>
+          </div>
+          <div class="column is-2 center-icon">
+            <mat-icon matSuffix class="portfolio">layers</mat-icon>
+            <div class="separation"><button mat-raised-button color="accent" (click)="goToContact()">Contact Us</button></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero">
+    <div class="hero-body portfolio-item">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-5 has-text-centered top-row">
+            <h2 class="subtitle lower-text">Inventory Management System</h2>
+            <p class="light-text">Titania Tech's offers a pre-built inventory management system that can be
+              easily integrated and expanded on depending on your exact business needs. We can customize this
+              software as much or as little as you require. The best part is that the time required to implement a
+              solution like this is greatly reduced due to us already having a robust backbone to start with.</p>
+          </div>
+        </div>
+        <div class="columns is-centered">
+
+          <div class="column is-10 showcase">
+            <mat-tab-group dynamicHeight mat-stretch-tabs>
+              <mat-tab label="Login Module">
+                <div class="columns is-centered">
+                  <div class="column is-8 shw-img">
+                    <div class="example-large-box mat-elevation-z4">
+                      <img class="screen" src="assets/img/login.PNG">
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Inventory Dashboard">
+                <div class="columns is-centered">
+                  <div class="column is-9 shw-img">
+                    <div class="example-large-box mat-elevation-z4">
+                      <img class="screen" src="assets/img/inventario.PNG">
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Item Card">
+                <div class="columns is-centered">
+                  <div class="column is-8 shw-img">
+                    <div class="example-large-box mat-elevation-z4">
+                      <img class="screen" src="assets/img/item-card.PNG">
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Insert Items">
+                <div class="columns is-centered">
+                  <div class="column is-8 shw-img">
+                    <div class="example-large-box mat-elevation-z4">
+                      <img class="screen" src="assets/img/formulario.PNG">
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-3 has-text-centered">
+            <p class="light-text fav">I absolutely need this!</p>
+            <button mat-fab class="favorite-button" matTooltip="Let's talk!" (click)="goToContact()">
+              <mat-icon aria-label="Icon with a heart icon">favorite</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

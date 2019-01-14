@@ -1,0 +1,90 @@
+.light-color {
+    background-color: #e5ecee;
+    background-image: url('../../../assets/img/joel3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top-row {
+    margin-bottom: 2em;
+}
+
+.upper-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.lower-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.highlight-box:hover .highlight-text {
+    color: #f3d119;
+}
+
+.highlight-text {
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+.center-icon {
+    text-align: center;
+}
+
+.big-icon {
+    font-size: 8em;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+::ng-deep mat-icon.portfolio {
+    font-size: 76px !important;
+    height: 76px !important;
+    width: 76px !important;
+}
+
+.example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+}
+  
+.example-small-box {
+    height: 100%;
+    width: 100%;
+}
+  
+.example-large-box {
+    min-height: 400px;
+    width: 100%;
+}
+
+.showcase .shw-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light-text {
+    font-weight: 100;
+}
+
+.favorite-button {
+    margin-top: 1em;
+    color: #fff;
+    background-color: #f35772;
+}
+
+p.fav {
+    padding-bottom: .5em;
+    font-size: 1.3em;
+    border-bottom: 1px solid #e2e2e2;
+}
