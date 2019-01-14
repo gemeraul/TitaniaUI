@@ -92,9 +92,10 @@
         <div class="columns is-centered">
           <div class="column is-3 has-text-centered">
             <p class="light-text fav">I absolutely need this!</p>
-            <button mat-fab class="favorite-button" matTooltip="Let's talk!" (click)="goToContact()">
+            <button mat-fab class="favorite-button" matTooltip="Let's talk!" (click)="loveProduct()">
               <mat-icon aria-label="Icon with a heart icon">favorite</mat-icon>
             </button>
+            <p class="light-text count">This product has been loved {{lovedCount}} times.</p>
           </div>
         </div>
       </div>
