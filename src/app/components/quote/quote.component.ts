@@ -85,7 +85,7 @@ export class QuoteComponent implements OnInit {
 
   openSnackBar() {
     this.snackBar.open('Your message has been sent ! We will contact you soon.', 'Ok', {
-      duration: 2000,
+      duration: 4000,
     });
     this.messageSent = true;
   }
