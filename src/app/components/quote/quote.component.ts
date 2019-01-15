@@ -32,7 +32,7 @@ export class QuoteComponent implements OnInit {
   quote: Quote;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
-  step = 0;
+  step = -1;
   emailControl = new FormControl('', [Validators.required, Validators.email]);
   fullNameControl = new FormControl('', Validators.required);
   phoneControl = new FormControl('', Validators.required);
@@ -58,6 +58,10 @@ export class QuoteComponent implements OnInit {
       description: [null, Validators.required],
       date: [null, Validators.required]
     });
+    setTimeout(() => {
+      this.step = 0;
+    }, 150);
+
   }
 
   setStep(index: number) {
@@ -80,7 +84,7 @@ export class QuoteComponent implements OnInit {
 
   getRequiredErrorMessage() {
     return this.fullNameControl.hasError('required') ? 'You must enter a value' :
-        '';
+      '';
   }
 
   openSnackBar() {
