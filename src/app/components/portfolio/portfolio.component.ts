@@ -25,18 +25,6 @@ export class PortfolioComponent implements OnInit {
 
   constructor(private db: AngularFirestore, private router: Router, public snackBar: MatSnackBar) {
     this.portfolioCollection = db.collection<Portfolio>('portfolios');
-    // this.portfolios = this.portfolioCollection.valueChanges();
-    // this.portfolios.subscribe(data => {
-    //   this.lovedCounters = data;
-    // });
-    // this.portfolios = this.portfolioCollection.snapshotChanges().pipe(
-    //   map(actions => {
-    //     return actions.map(a => {
-    //       const data = a.payload.doc.data() as Portfolio;
-    //       const id = a.payload.doc.id;
-    //       return { id, ...data };
-    //     });
-    //   }));
     this.portfolioCollection.snapshotChanges()
       .pipe(
         map(actions => {
