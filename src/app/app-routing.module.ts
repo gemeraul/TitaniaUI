@@ -12,11 +12,11 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'web', component: WebComponent },
-  { path: 'portfolio', component: ComingSoonComponent },
+  { path: 'portfolio', component: PortfolioComponent },
   { path: 'ourteam', component: OurTeamComponent },
   { path: 'design', component: DesignComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'test', component: PortfolioComponent },
+  { path: 'soon', component: ComingSoonComponent },
   { path: '**', redirectTo: '/home' }
 ];
 
