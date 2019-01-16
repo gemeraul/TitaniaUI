@@ -3,7 +3,6 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material';
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { StepperSelectionEvent } from '@angular/cdk/stepper';
 
 export interface Quote {
   name: string;
