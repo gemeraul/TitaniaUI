@@ -3,6 +3,7 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material';
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { StepperSelectionEvent } from '@angular/cdk/stepper';
 
 export interface Quote {
   name: string;
@@ -32,7 +33,7 @@ export class QuoteComponent implements OnInit {
   quote: Quote;
   minDate = new Date();
   maxDate = new Date(2020, 0, 1);
-  step = 0;
+  step = -1;
   emailControl = new FormControl('', [Validators.required, Validators.email]);
   fullNameControl = new FormControl('', Validators.required);
   phoneControl = new FormControl('', Validators.required);
@@ -58,6 +59,10 @@ export class QuoteComponent implements OnInit {
       description: [null, Validators.required],
       date: [null, Validators.required]
     });
+
+    setTimeout(() => {
+      this.step = 0;
+    }, 400);
   }
 
   setStep(index: number) {
