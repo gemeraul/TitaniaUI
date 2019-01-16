@@ -84,7 +84,7 @@ export class QuoteComponent implements OnInit {
 
   getRequiredErrorMessage() {
     return this.fullNameControl.hasError('required') ? 'You must enter a value' :
-        '';
+      '';
   }
 
   openSnackBar() {
