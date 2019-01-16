@@ -63,9 +63,9 @@ export class ContactComponent implements OnInit {
       email: this.contactFormGroup.get('email').value,
       phone: this.contactFormGroup.get('phone').value,
       projectDescription: this.contactFormGroup.get('description').value
-    }
+    };
     this.sendMessage(this.message);
-    // TODO: Probably better to add this in sendMessage() as a resolve path of promise? 
+    // TODO: Probably better to add this in sendMessage() as a resolve path of promise?
     this.openSnackBar();
   }
 
