@@ -83,3 +83,15 @@ a.nostyle:link, a.nostyle:visited {
     letter-spacing: .2em;
     font-weight: 100;
 }
+
+h2.info-contact {
+    font-size: 18px;
+}
+
+span.bold {
+    color: #214fd6;
+}
+
+.contact-title {
+    margin-bottom: 1em;
+}
