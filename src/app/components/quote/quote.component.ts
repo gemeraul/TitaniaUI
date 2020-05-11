@@ -58,10 +58,10 @@ export class QuoteComponent implements OnInit {
       description: [null, Validators.required],
       date: [null, Validators.required]
     });
+
     setTimeout(() => {
       this.step = 0;
-    }, 150);
-
+    }, 400);
   }
 
   setStep(index: number) {

@@ -17,7 +17,6 @@ export interface PortfolioId extends Portfolio { id: string; }
 export class PortfolioComponent implements OnInit {
 
   lovedCounters = [];
-  test;
   // Firebase
   private portfolioCollection: AngularFirestoreCollection<Portfolio>;
   portfolios: PortfolioId[];

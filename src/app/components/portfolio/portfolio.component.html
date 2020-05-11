@@ -1,3 +1,5 @@
+<app-quote></app-quote>
+
 <section class="hero">
 
   <div class="hero light-color">
@@ -94,7 +96,7 @@
             <button mat-fab class="favorite-button" matTooltip="Let's talk!" [matTooltipPosition]="'after'" (click)="loveProduct(portfolios[0], portfolios[0].loveCount)">
               <mat-icon aria-label="Icon with a heart icon">favorite</mat-icon>
             </button>
-            <p *ngIf="portfolios.length > 0" class="light-text count">This product has been loved {{portfolios[0].loveCount}} times.</p>
+            <p *ngIf="portfolios" class="light-text count">This product has been loved {{portfolios[0].loveCount}} times.</p>
           </div>
         </div>
       </div>

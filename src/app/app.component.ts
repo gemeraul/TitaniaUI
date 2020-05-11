@@ -8,10 +8,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy{
+export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
   title = 'app';
+  // Version number format: App Change . Fixes/Changes . YearWWDay
+  version = '2.0.192704';
 
   constructor(private router: Router) { }
 
@@ -21,6 +23,7 @@ export class AppComponent implements OnInit, OnDestroy{
         filter(event => event instanceof NavigationEnd)
       )
       .subscribe(() => window.scrollTo(0, 0));
+    console.log('Version: ', this.version);
   }
 
   ngOnDestroy() {
